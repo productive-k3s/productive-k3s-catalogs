@@ -1,0 +1,56 @@
+site_name: Productive K3S Catalogs
+site_description: Public catalog and marketplace for Productive K3S infrastructure scenarios, profiles and add-ons.
+site_url: https://catalogs.productive-k3s.io/
+repo_name: productive-k3s/productive-k3s-catalogs
+repo_url: https://github.com/productive-k3s/productive-k3s-catalogs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/logo.svg
+  favicon: assets/images/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Marketplace: catalog.md
+  - Catalog format: catalog-format.md
+
+extra_css:
+  - assets/stylesheets/marketplace.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js
+  - assets/javascripts/marketplace.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true

@@ -1,0 +1,54 @@
+apiVersion: catalogs.productive-k3s.io/v1alpha1
+kind: ProductiveK3SCatalog
+metadata:
+  name: productive-k3s-catalog
+  generatedAt: "2026-05-27T00:00:00Z"
+entries:
+  - id: rancher
+    name: Rancher
+    kind: addon
+    visibility: public
+    category: management
+    description: Rancher dashboard for Productive K3S clusters.
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.tgz
+    tags:
+      - rancher
+      - dashboard
+      - management
+  - id: aws-single-node
+    name: AWS single node
+    kind: scenario
+    visibility: public
+    category: cloud
+    description: Single-node Productive K3S scenario for AWS EC2.
+    version: 0.1.0
+    sourceRepository: productive-k3s-infra
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-0.1.0.tgz
+    tags:
+      - aws
+      - cloud
+      - single-node
+  - id: edge-arm-pro
+    name: Edge ARM Pro
+    kind: profile
+    visibility: protected
+    category: edge
+    description: Commercial ARM edge profile for production-like Raspberry Pi and small edge nodes.
+    version: 0.1.0
+    sourceRepository: productive-k3s-infra-pro
+    artifact:
+      type: tgz
+      url: null
+    commercial:
+      label: Request access
+      url: https://productive-k3s.io/contact/
+    tags:
+      - arm64
+      - edge
+      - pro
