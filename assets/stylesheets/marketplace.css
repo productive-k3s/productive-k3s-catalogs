@@ -1,0 +1,108 @@
+.pk3s-marketplace {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.pk3s-filters {
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  background: var(--md-default-bg-color);
+}
+
+.pk3s-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.pk3s-filters input,
+.pk3s-filters select {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color);
+}
+
+.pk3s-summary {
+  margin-bottom: 1rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.pk3s-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.pk3s-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 1rem;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.pk3s-card h3 {
+  margin: 0;
+}
+
+.pk3s-card p {
+  margin: 0;
+}
+
+.pk3s-badges,
+.pk3s-tags,
+.pk3s-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pk3s-badge,
+.pk3s-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: var(--md-code-bg-color);
+}
+
+.pk3s-action {
+  display: inline-flex;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color) !important;
+}
+
+.pk3s-action.secondary {
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color) !important;
+}
+
+@media (max-width: 800px) {
+  .pk3s-marketplace {
+    grid-template-columns: 1fr;
+  }
+
+  .pk3s-filters {
+    position: static;
+  }
+}
