@@ -32,6 +32,9 @@ jobs:
       - name: Validate catalog
         run: make validate
 
+      - name: Sync catalog into docs tree
+        run: make sync-catalog
+
       - name: Build MkDocs site
         run: mkdocs build --strict
 
@@ -57,6 +60,9 @@ jobs:
 
       - name: Validate catalog
         run: make validate
+
+      - name: Sync catalog into docs tree
+        run: make sync-catalog
 
       - name: Configure Git author
         run: |
