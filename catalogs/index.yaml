@@ -2,7 +2,7 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-05-29T15:06:44Z"
+  generatedAt: "2026-05-29T17:47:47Z"
 entries:
   - id: nginx
     name: nginx
@@ -24,11 +24,11 @@ entries:
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.0
+    version: 0.9.41-0.9.1-28-ga806ddb-dirty
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.9.41-0.9.1-28-ga806ddb-dirty.tgz
     tags:
       - cloud
       - opentofu
@@ -39,11 +39,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.1.0
+    version: 0.9.41-0.9.1-28-ga806ddb-dirty
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.9.41-0.9.1-28-ga806ddb-dirty.tgz
     tags:
       - edge
       - ansible
@@ -54,11 +54,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.1.0
+    version: 0.9.41-0.9.1-28-ga806ddb-dirty
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.9.41-0.9.1-28-ga806ddb-dirty.tgz
     tags:
       - edge
       - ansible
@@ -69,11 +69,11 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: 0.1.0
+    version: 0.9.41-0.9.1-28-ga806ddb-dirty
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.9.41-0.9.1-28-ga806ddb-dirty.tgz
     tags:
       - local
       - opentofu
