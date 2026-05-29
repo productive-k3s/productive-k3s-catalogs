@@ -1,16 +1,21 @@
-.PHONY: setup serve build validate clean
+.PHONY: setup serve build validate sync-catalog clean
 
 setup:
-	python -m pip install -r requirements.txt
+	python3 -m pip install -r requirements.txt
 
 serve:
+	$(MAKE) sync-catalog
 	mkdocs serve
 
 build:
+	$(MAKE) sync-catalog
 	mkdocs build --strict
 
 validate:
-	python scripts/validate_catalog.py catalogs/index.yaml
+	python3 scripts/validate_catalog.py catalogs/index.yaml
+
+sync-catalog:
+	python3 scripts/sync_catalog_docs.py
 
 clean:
 	rm -rf site
