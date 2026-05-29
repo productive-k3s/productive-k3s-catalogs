@@ -35,6 +35,11 @@ jobs:
       - name: Sync catalog into docs tree
         run: make sync-catalog
 
+      - name: Verify custom domain file
+        run: |
+          test -f docs/CNAME
+          grep -Fx 'catalogs.productive-k3s.io' docs/CNAME
+
       - name: Build MkDocs site
         run: mkdocs build --strict
 
@@ -63,6 +68,11 @@ jobs:
 
       - name: Sync catalog into docs tree
         run: make sync-catalog
+
+      - name: Verify custom domain file
+        run: |
+          test -f docs/CNAME
+          grep -Fx 'catalogs.productive-k3s.io' docs/CNAME
 
       - name: Configure Git author
         run: |
