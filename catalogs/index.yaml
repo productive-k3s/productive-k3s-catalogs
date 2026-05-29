@@ -1,0 +1,80 @@
+apiVersion: catalogs.productive-k3s.io/v1alpha1
+kind: ProductiveK3SCatalog
+metadata:
+  name: productive-k3s-catalog
+  generatedAt: "2026-05-29T15:06:44Z"
+entries:
+  - id: nginx
+    name: nginx
+    kind: addon
+    visibility: public
+    category: example
+    description: "nginx addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.tgz
+    tags:
+      - nginx
+      - addon
+  - id: aws-single-node-basic
+    name: aws-single-node-basic
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: 0.1.0
+    sourceRepository: productive-k3s-infra
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.tgz
+    tags:
+      - cloud
+      - opentofu
+      - profile
+  - id: on-prem-arm
+    name: on-prem-arm
+    kind: profile
+    visibility: public
+    category: edge
+    description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
+    version: 0.1.0
+    sourceRepository: productive-k3s-infra
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.tgz
+    tags:
+      - edge
+      - ansible
+      - profile
+  - id: on-prem-basic
+    name: on-prem-basic
+    kind: profile
+    visibility: public
+    category: edge
+    description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
+    version: 0.1.0
+    sourceRepository: productive-k3s-infra
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.tgz
+    tags:
+      - edge
+      - ansible
+      - profile
+  - id: multipass-1-server-2-agents
+    name: multipass-1-server-2-agents
+    kind: profile
+    visibility: public
+    category: local
+    description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
+    version: 0.1.0
+    sourceRepository: productive-k3s-infra
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.tgz
+    tags:
+      - local
+      - opentofu
+      - profile
