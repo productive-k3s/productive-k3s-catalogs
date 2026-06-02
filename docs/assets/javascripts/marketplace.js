@@ -22,6 +22,7 @@
       tags: entry.tags || [],
       artifact: entry.artifact || {},
       commercial: entry.commercial || {},
+      install: entry.install || { requiresLocalOverrides: false, inputs: [] },
     };
   }
 
@@ -83,15 +84,32 @@
         ? `<a class="pk3s-action" href="${escapeHtml(commercialUrl)}">${escapeHtml(commercialLabel)}</a>`
         : `<span class="pk3s-action secondary">Coming soon</span>`;
 
+    const install = entry.install || { requiresLocalOverrides: false, inputs: [] };
+    const localOverrideBadge = entry.kind === 'profile' && install.requiresLocalOverrides
+      ? `<span class="pk3s-badge">local overrides required</span>`
+      : '';
+    const inputsBlock = entry.kind === 'profile' && Array.isArray(install.inputs) && install.inputs.length
+      ? `
+        <div class="pk3s-install-meta">
+          <strong>Install inputs</strong>
+          <ul>
+            ${install.inputs.map((input) => `<li><code>${escapeHtml(input.name)}</code> · ${escapeHtml(input.source || 'either')}${input.required ? ' · required' : ''}${input.sensitive ? ' · sensitive' : ''}</li>`).join('')}
+          </ul>
+        </div>
+      `
+      : '';
+
     return `
       <article class="pk3s-card" data-kind="${escapeHtml(entry.kind)}" data-visibility="${escapeHtml(entry.visibility)}">
         <div class="pk3s-badges">
           <span class="pk3s-badge">${escapeHtml(entry.kind)}</span>
           <span class="pk3s-badge">${escapeHtml(entry.visibility)}</span>
           <span class="pk3s-badge">${escapeHtml(entry.category)}</span>
+          ${localOverrideBadge}
         </div>
         <h3>${escapeHtml(entry.name)}</h3>
         <p>${escapeHtml(entry.description)}</p>
+        ${inputsBlock}
         <div class="pk3s-tags">
           ${entry.tags.map((tag) => `<span class="pk3s-tag">${escapeHtml(tag)}</span>`).join('')}
         </div>
