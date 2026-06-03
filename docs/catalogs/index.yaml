@@ -2,7 +2,7 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-06-02T15:01:49Z"
+  generatedAt: "2026-06-03T20:04:31Z"
 entries:
   - id: nginx
     name: nginx
@@ -24,11 +24,11 @@ entries:
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.9.61-0.9.3
+    version: 0.9.62-0.9.4
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.9.61-0.9.3.tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.9.62-0.9.4.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -57,11 +57,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.9.61-0.9.3
+    version: 0.9.62-0.9.4
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.9.61-0.9.3.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.9.62-0.9.4.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -85,11 +85,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.9.61-0.9.3
+    version: 0.9.62-0.9.4
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.9.61-0.9.3.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.9.62-0.9.4.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -118,11 +118,11 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: 0.9.61-0.9.3
+    version: 0.9.62-0.9.4
     sourceRepository: productive-k3s-infra
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.9.61-0.9.3.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.9.62-0.9.4.tgz
     install:
       requiresLocalOverrides: false
       inputs:
