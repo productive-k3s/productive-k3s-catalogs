@@ -25,7 +25,7 @@ entries:
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
     version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.9.62-0.9.4.tgz
@@ -58,7 +58,7 @@ entries:
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
     version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.9.62-0.9.4.tgz
@@ -86,7 +86,7 @@ entries:
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
     version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.9.62-0.9.4.tgz
@@ -119,7 +119,7 @@ entries:
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
     version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.9.62-0.9.4.tgz
