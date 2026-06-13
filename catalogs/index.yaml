@@ -2,8 +2,36 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-06-03T20:04:31Z"
+  generatedAt: "2026-06-13T15:05:33Z"
 entries:
+  - id: cert-manager
+    name: cert-manager
+    kind: addon
+    visibility: public
+    category: platform
+    description: "cert-manager addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.tgz
+    tags:
+      - cert-manager
+      - addon
+  - id: longhorn
+    name: longhorn
+    kind: addon
+    visibility: public
+    category: platform
+    description: "longhorn addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.tgz
+    tags:
+      - longhorn
+      - addon
   - id: nginx
     name: nginx
     kind: addon
@@ -18,17 +46,59 @@ entries:
     tags:
       - nginx
       - addon
+  - id: rancher
+    name: rancher
+    kind: addon
+    visibility: public
+    category: platform
+    description: "rancher addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.tgz
+    tags:
+      - rancher
+      - addon
+  - id: registry
+    name: registry
+    kind: addon
+    visibility: public
+    category: platform
+    description: "registry addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/registry-0.1.0.tgz
+    tags:
+      - registry
+      - addon
+  - id: base
+    name: base
+    kind: stack
+    visibility: public
+    category: platform
+    description: "base stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/base-0.1.0.tgz
+    tags:
+      - base
+      - stack
   - id: aws-single-node-basic
     name: aws-single-node-basic
     kind: profile
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    version: b72a3a6
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.9.62-0.9.4.tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-b72a3a6.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -57,11 +127,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    version: b72a3a6
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.9.62-0.9.4.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-b72a3a6.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -85,11 +155,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    version: b72a3a6
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.9.62-0.9.4.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-b72a3a6.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -118,11 +188,11 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: 0.9.62-0.9.4
-    sourceRepository: productive-k3s-infra
+    version: b72a3a6
+    sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.9.62-0.9.4.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-b72a3a6.tgz
     install:
       requiresLocalOverrides: false
       inputs:
