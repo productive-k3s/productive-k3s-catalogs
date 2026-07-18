@@ -5,7 +5,7 @@ import yaml
 
 REQUIRED_ENTRY_FIELDS = ["id", "name", "kind", "visibility", "category", "description"]
 ALLOWED_VISIBILITY = {"public", "protected", "private"}
-ALLOWED_KIND = {"addon", "scenario", "profile"}
+ALLOWED_KIND = {"addon", "scenario", "profile", "stack"}
 
 
 def fail(message: str) -> None:

@@ -17,7 +17,7 @@ It exposes a CLI-readable catalog and a marketplace-style web portal for:
 graph LR
   Ops[productive-k3s-ops] --> Catalogs[productive-k3s-catalogs]
   Infra[productive-k3s-infra] --> Ops
-  InfraPro[productive-k3s-infra-pro] --> Ops
+  InfraPro[productive-k3s-profiles-pro] --> Ops
   Addons[productive-k3s-addons] --> Ops
   AddonsPro[productive-k3s-addons-pro] --> Ops
   Catalogs --> CLI[productive-k3s-cli]
