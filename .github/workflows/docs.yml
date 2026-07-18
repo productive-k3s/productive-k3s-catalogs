@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          submodules: recursive
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -41,7 +43,7 @@ jobs:
           grep -Fx 'catalogs.productive-k3s.io' docs/CNAME
 
       - name: Build MkDocs site
-        run: mkdocs build --strict
+        run: make build
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -54,6 +56,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          submodules: recursive
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -78,6 +81,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync shared theme
+        run: make sync-theme
 
       - name: Deploy MkDocs site
         run: mkdocs gh-deploy --force
