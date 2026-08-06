@@ -7,6 +7,29 @@
     category: 'all',
   };
 
+  const isSpanish = window.location.pathname.indexOf('/es/') === 0;
+  const strings = {
+    all: isSpanish ? 'Todos' : 'All',
+    summary(filtered, total) {
+      return isSpanish
+        ? `${filtered} entradas visibles de ${total} entradas del catálogo.`
+        : `${filtered} entries shown from ${total} catalog entries.`;
+    },
+    noMatches: isSpanish
+      ? 'No hay entradas del catálogo que coincidan con los filtros seleccionados.'
+      : 'No catalog entries match the selected filters.',
+    loadError: isSpanish ? 'No se pudo cargar el catálogo' : 'Unable to load catalog',
+    download: isSpanish ? 'Descargar TGZ' : 'Download TGZ',
+    requestAccess: isSpanish ? 'Solicitar acceso' : 'Request access',
+    comingSoon: isSpanish ? 'Próximamente' : 'Coming soon',
+    installInputs: isSpanish ? 'Entradas de instalación' : 'Install inputs',
+    localOverridesRequired: isSpanish ? 'requiere overrides locales' : 'local overrides required',
+    version: isSpanish ? 'Versión' : 'Version',
+    required: isSpanish ? 'obligatorio' : 'required',
+    sensitive: isSpanish ? 'sensible' : 'sensitive',
+    either: isSpanish ? 'cualquiera' : 'either',
+  };
+
   const byId = (id) => document.getElementById(id);
 
   function normalizeEntry(entry) {
@@ -27,10 +50,10 @@
   }
 
   async function loadCatalog(container) {
-    const catalogUrl = container.dataset.catalogUrl || '../catalogs/index.yaml';
+    const catalogUrl = container.dataset.catalogUrl || '/catalogs/index.yaml';
     const response = await fetch(catalogUrl);
     if (!response.ok) {
-      throw new Error(`Unable to load catalog: ${response.status}`);
+      throw new Error(`${strings.loadError}: ${response.status}`);
     }
     const raw = await response.text();
     const data = jsyaml.load(raw);
@@ -41,7 +64,7 @@
     const current = select.value;
     const options = ['all', ...Array.from(new Set(values)).sort()];
     select.innerHTML = options
-      .map((value) => `<option value="${value}">${value === 'all' ? 'All' : escapeHtml(value)}</option>`)
+      .map((value) => `<option value="${value}">${value === 'all' ? strings.all : escapeHtml(value)}</option>`)
       .join('');
     select.value = options.includes(current) ? current : 'all';
   }
@@ -76,24 +99,24 @@
   function renderCard(entry) {
     const artifactUrl = entry.artifact && entry.artifact.url;
     const commercialUrl = entry.commercial && entry.commercial.url;
-    const commercialLabel = (entry.commercial && entry.commercial.label) || 'Request access';
+    const commercialLabel = (entry.commercial && entry.commercial.label) || strings.requestAccess;
 
     const action = artifactUrl
-      ? `<a class="pk3s-action" href="${escapeHtml(artifactUrl)}">Download TGZ</a>`
+      ? `<a class="pk3s-action" href="${escapeHtml(artifactUrl)}">${escapeHtml(strings.download)}</a>`
       : commercialUrl
         ? `<a class="pk3s-action" href="${escapeHtml(commercialUrl)}">${escapeHtml(commercialLabel)}</a>`
-        : `<span class="pk3s-action secondary">Coming soon</span>`;
+        : `<span class="pk3s-action secondary">${escapeHtml(strings.comingSoon)}</span>`;
 
     const install = entry.install || { requiresLocalOverrides: false, inputs: [] };
     const localOverrideBadge = entry.kind === 'profile' && install.requiresLocalOverrides
-      ? `<span class="pk3s-badge">local overrides required</span>`
+      ? `<span class="pk3s-badge">${escapeHtml(strings.localOverridesRequired)}</span>`
       : '';
     const inputsBlock = entry.kind === 'profile' && Array.isArray(install.inputs) && install.inputs.length
       ? `
         <div class="pk3s-install-meta">
-          <strong>Install inputs</strong>
+          <strong>${escapeHtml(strings.installInputs)}</strong>
           <ul>
-            ${install.inputs.map((input) => `<li><code>${escapeHtml(input.name)}</code> · ${escapeHtml(input.source || 'either')}${input.required ? ' · required' : ''}${input.sensitive ? ' · sensitive' : ''}</li>`).join('')}
+            ${install.inputs.map((input) => `<li><code>${escapeHtml(input.name)}</code> · ${escapeHtml(input.source || strings.either)}${input.required ? ` · ${escapeHtml(strings.required)}` : ''}${input.sensitive ? ` · ${escapeHtml(strings.sensitive)}` : ''}</li>`).join('')}
           </ul>
         </div>
       `
@@ -113,7 +136,7 @@
         <div class="pk3s-tags">
           ${entry.tags.map((tag) => `<span class="pk3s-tag">${escapeHtml(tag)}</span>`).join('')}
         </div>
-        <small>${entry.version ? `Version ${escapeHtml(entry.version)}` : ''}${entry.sourceRepository ? ` · ${escapeHtml(entry.sourceRepository)}` : ''}</small>
+        <small>${entry.version ? `${escapeHtml(strings.version)} ${escapeHtml(entry.version)}` : ''}${entry.sourceRepository ? ` · ${escapeHtml(entry.sourceRepository)}` : ''}</small>
         <div class="pk3s-actions">${action}</div>
       </article>
     `;
@@ -127,10 +150,10 @@
     fillSelect(byId('pk3s-kind'), state.entries.map((entry) => entry.kind));
     fillSelect(byId('pk3s-category'), state.entries.map((entry) => entry.category));
 
-    summary.textContent = `${filtered.length} entries shown from ${state.entries.length} catalog entries.`;
+    summary.textContent = strings.summary(filtered.length, state.entries.length);
     cards.innerHTML = filtered.length
       ? filtered.map(renderCard).join('')
-      : '<p>No catalog entries match the selected filters.</p>';
+      : `<p>${escapeHtml(strings.noMatches)}</p>`;
   }
 
   function wireEvents() {

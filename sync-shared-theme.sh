@@ -10,16 +10,16 @@ if [[ ! -d "${SHARED_THEME_DIR}" ]]; then
 fi
 
 install -d \
-  "${ROOT_DIR}/docs/overrides/partials" \
-  "${ROOT_DIR}/docs/assets/stylesheets" \
-  "${ROOT_DIR}/docs/assets/images"
+  "${ROOT_DIR}/docs/src/overrides/partials" \
+  "${ROOT_DIR}/docs/src/assets/stylesheets" \
+  "${ROOT_DIR}/docs/src/assets/images"
 
-cp "${SHARED_THEME_DIR}/main.html" "${ROOT_DIR}/docs/overrides/main.html"
-cp "${SHARED_THEME_DIR}/partials/logo.html" "${ROOT_DIR}/docs/overrides/partials/logo.html"
-cp "${SHARED_THEME_DIR}/partials/header.html" "${ROOT_DIR}/docs/overrides/partials/header.html"
-cp "${SHARED_THEME_DIR}/partials/footer.html" "${ROOT_DIR}/docs/overrides/partials/footer.html"
-cp "${SHARED_THEME_DIR}/partials/toc.html" "${ROOT_DIR}/docs/overrides/partials/toc.html"
-cp "${SHARED_THEME_DIR}/assets/stylesheets/extra.css" "${ROOT_DIR}/docs/assets/stylesheets/extra.css"
-cp "${SHARED_THEME_DIR}/assets/images/argentina.png" "${ROOT_DIR}/docs/assets/images/argentina.png"
-cp "${SHARED_THEME_DIR}/assets/images/productive-k3s-icon-square-0.3x.png" "${ROOT_DIR}/docs/assets/images/productive-k3s-icon-square-0.3x.png"
-cp "${SHARED_THEME_DIR}/assets/images/favicon.ico" "${ROOT_DIR}/docs/assets/images/favicon.ico"
+cp "${SHARED_THEME_DIR}/main.html" "${ROOT_DIR}/docs/src/overrides/main.html"
+cp "${SHARED_THEME_DIR}/partials/logo.html" "${ROOT_DIR}/docs/src/overrides/partials/logo.html"
+cp "${SHARED_THEME_DIR}/partials/header.html" "${ROOT_DIR}/docs/src/overrides/partials/header.html"
+cp "${SHARED_THEME_DIR}/partials/footer.html" "${ROOT_DIR}/docs/src/overrides/partials/footer.html"
+cp "${SHARED_THEME_DIR}/partials/toc.html" "${ROOT_DIR}/docs/src/overrides/partials/toc.html"
+cp "${SHARED_THEME_DIR}/assets/stylesheets/extra.css" "${ROOT_DIR}/docs/src/assets/stylesheets/extra.css"
+cp "${SHARED_THEME_DIR}/assets/images/argentina.png" "${ROOT_DIR}/docs/src/assets/images/argentina.png"
+cp "${SHARED_THEME_DIR}/assets/images/productive-k3s-icon-square-0.3x.png" "${ROOT_DIR}/docs/src/assets/images/productive-k3s-icon-square-0.3x.png"
+cp "${SHARED_THEME_DIR}/assets/images/favicon.ico" "${ROOT_DIR}/docs/src/assets/images/favicon.ico"

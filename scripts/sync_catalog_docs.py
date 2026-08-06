@@ -12,7 +12,7 @@ def fail(message: str) -> None:
 def main() -> None:
     root = Path(__file__).resolve().parent.parent
     source = root / "catalogs" / "index.yaml"
-    target = root / "docs" / "catalogs" / "index.yaml"
+    target = root / "docs" / "src" / "catalogs" / "index.yaml"
 
     if not source.exists():
       fail(f"catalog source not found: {source}")

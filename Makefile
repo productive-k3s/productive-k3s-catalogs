@@ -1,17 +1,35 @@
-.PHONY: setup serve build validate sync-catalog sync-theme clean
+SHELL := /bin/bash
+
+.PHONY: setup \
+	docs-build docs-serve docs-up docs-down docs-clean \
+	serve build clean \
+	validate sync-catalog sync-theme
 
 setup:
 	python3 -m pip install -r requirements.txt
 
-serve:
+docs-serve:
 	$(MAKE) sync-theme
 	$(MAKE) sync-catalog
 	mkdocs serve
 
-build:
+docs-build:
 	$(MAKE) sync-theme
 	$(MAKE) sync-catalog
 	mkdocs build --strict
+
+docs-up:
+	$(MAKE) docs-serve
+
+docs-down:
+	$(MAKE) docs-clean
+
+docs-clean:
+	rm -rf site
+
+serve: docs-serve
+
+build: docs-build
 
 validate:
 	python3 scripts/validate_catalog.py catalogs/index.yaml
@@ -22,5 +40,4 @@ sync-catalog:
 sync-theme:
 	bash ./sync-shared-theme.sh
 
-clean:
-	rm -rf site
+clean: docs-clean
