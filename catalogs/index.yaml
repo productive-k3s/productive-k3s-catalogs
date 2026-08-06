@@ -2,7 +2,7 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-06-13T15:05:33Z"
+  generatedAt: "2026-08-06T01:12:31Z"
 entries:
   - id: cert-manager
     name: cert-manager
@@ -94,11 +94,11 @@ entries:
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: b72a3a6
+    version: 594a7c9
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-b72a3a6.tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-594a7c9.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -127,11 +127,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: b72a3a6
+    version: 594a7c9
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-b72a3a6.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-594a7c9.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -155,11 +155,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: b72a3a6
+    version: 594a7c9
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-b72a3a6.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-594a7c9.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -188,11 +188,11 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: b72a3a6
+    version: 594a7c9
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-b72a3a6.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-594a7c9.tgz
     install:
       requiresLocalOverrides: false
       inputs:
