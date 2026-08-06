@@ -1,13 +1,16 @@
 site_name: Productive K3S Catalogs
-site_description: Public catalog and marketplace for Productive K3S infrastructure scenarios, profiles and add-ons.
+site_description: Public catalog and marketplace for Productive K3S infrastructure scenarios, profiles and add-ons with bilingual documentation.
+site_author: Productive K3S Catalogs
 site_url: https://catalogs.productive-k3s.io/
-repo_name: productive-k3s/productive-k3s-catalogs
 repo_url: https://github.com/productive-k3s/productive-k3s-catalogs
-edit_uri: edit/main/docs/
+repo_name: GitHub
+edit_uri: edit/main/docs/src/
+docs_dir: docs/src
+site_dir: site
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: docs/src/overrides
   language: en
   favicon: assets/images/favicon.ico
   features:
@@ -32,8 +35,18 @@ theme:
 
 nav:
   - Home: index.md
-  - Marketplace: catalog.md
-  - Catalog format: catalog-format.md
+  - English:
+      - Home: en/index.md
+      - Product:
+          - en/product/index.md
+          - Marketplace: en/product/catalog.md
+          - Catalog format: en/product/catalog-format.md
+  - Español:
+      - Inicio: es/index.md
+      - Producto:
+          - es/product/index.md
+          - Marketplace: es/product/catalog.md
+          - Formato del catálogo: es/product/catalog-format.md
 
 extra_css:
   - assets/stylesheets/extra.css

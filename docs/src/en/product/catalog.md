@@ -1,6 +1,6 @@
 # Marketplace
 
-<div class="pk3s-marketplace" data-catalog-url="../catalogs/index.yaml">
+<div class="pk3s-marketplace" data-catalog-url="/catalogs/index.yaml">
   <aside class="pk3s-filters">
     <label>
       Search
