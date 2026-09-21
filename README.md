@@ -44,6 +44,7 @@ It is designed to:
 
 ```bash
 make setup
+make docs-prepare
 make serve
 ```
 
@@ -52,6 +53,8 @@ The documentation site will be available at:
 ```text
 http://127.0.0.1:8000
 ```
+
+`make docs-prepare` downloads the pinned shared documentation theme into a local cache when the workspace does not already provide `SHARED_THEME_DIR`.
 
 ## Validate catalog
 

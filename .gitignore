@@ -1,4 +1,5 @@
 site/
+.cache/
 .venv/
 __pycache__/
 docs/assets/images/argentina.png

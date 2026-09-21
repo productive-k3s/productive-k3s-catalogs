@@ -17,14 +17,16 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEWSLETTER_TURNSTILE_SITE_KEY: ${{ vars.NEWSLETTER_TURNSTILE_SITE_KEY }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # actions/checkout@v5
         with:
           submodules: recursive
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -39,8 +41,8 @@ jobs:
 
       - name: Verify custom domain file
         run: |
-          test -f docs/CNAME
-          grep -Fx 'catalogs.productive-k3s.io' docs/CNAME
+          test -f docs/src/CNAME
+          grep -Fx 'catalogs.productive-k3s.io' docs/src/CNAME
 
       - name: Build MkDocs site
         run: make build
@@ -49,17 +51,19 @@ jobs:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: build
+    env:
+      NEWSLETTER_TURNSTILE_SITE_KEY: ${{ vars.NEWSLETTER_TURNSTILE_SITE_KEY }}
     permissions:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # actions/checkout@v5
         with:
           fetch-depth: 0
           submodules: recursive
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -74,8 +78,8 @@ jobs:
 
       - name: Verify custom domain file
         run: |
-          test -f docs/CNAME
-          grep -Fx 'catalogs.productive-k3s.io' docs/CNAME
+          test -f docs/src/CNAME
+          grep -Fx 'catalogs.productive-k3s.io' docs/src/CNAME
 
       - name: Configure Git author
         run: |

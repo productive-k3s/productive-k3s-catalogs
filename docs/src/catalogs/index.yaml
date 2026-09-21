@@ -2,8 +2,22 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-08-06T01:12:31Z"
+  generatedAt: "2026-09-10T13:49:50Z"
 entries:
+  - id: argocd
+    name: argocd
+    kind: addon
+    visibility: public
+    category: gitops
+    description: "argocd addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.tgz
+    tags:
+      - argocd
+      - addon
   - id: cert-manager
     name: cert-manager
     kind: addon
@@ -17,6 +31,62 @@ entries:
       url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.tgz
     tags:
       - cert-manager
+      - addon
+  - id: cloudnative-pg
+    name: cloudnative-pg
+    kind: addon
+    visibility: public
+    category: database
+    description: "cloudnative-pg addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.tgz
+    tags:
+      - cloudnative-pg
+      - addon
+  - id: geoserver-cloud
+    name: geoserver-cloud
+    kind: addon
+    visibility: public
+    category: geospatial
+    description: "geoserver-cloud addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.tgz
+    tags:
+      - geoserver-cloud
+      - addon
+  - id: kubent
+    name: kubent
+    kind: addon
+    visibility: public
+    category: operations
+    description: "kubent addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.tgz
+    tags:
+      - kubent
+      - addon
+  - id: kyverno
+    name: kyverno
+    kind: addon
+    visibility: public
+    category: security
+    description: "kyverno addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.tgz
+    tags:
+      - kyverno
       - addon
   - id: longhorn
     name: longhorn
@@ -46,6 +116,20 @@ entries:
     tags:
       - nginx
       - addon
+  - id: popeye
+    name: popeye
+    kind: addon
+    visibility: public
+    category: operations
+    description: "popeye addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.tgz
+    tags:
+      - popeye
+      - addon
   - id: rancher
     name: rancher
     kind: addon
@@ -74,6 +158,20 @@ entries:
     tags:
       - registry
       - addon
+  - id: trivy-operator
+    name: trivy-operator
+    kind: addon
+    visibility: public
+    category: security
+    description: "trivy-operator addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.tgz
+    tags:
+      - trivy-operator
+      - addon
   - id: base
     name: base
     kind: stack
@@ -88,17 +186,101 @@ entries:
     tags:
       - base
       - stack
+  - id: cluster-health
+    name: cluster-health
+    kind: stack
+    visibility: public
+    category: operations
+    description: "cluster-health stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.tgz
+    tags:
+      - cluster-health
+      - stack
+  - id: cluster-security
+    name: cluster-security
+    kind: stack
+    visibility: public
+    category: security
+    description: "cluster-security stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.tgz
+    tags:
+      - cluster-security
+      - stack
+  - id: database
+    name: database
+    kind: stack
+    visibility: public
+    category: database
+    description: "database stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/database-0.1.0.tgz
+    tags:
+      - database
+      - stack
+  - id: geospatial
+    name: geospatial
+    kind: stack
+    visibility: public
+    category: geospatial
+    description: "geospatial stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.tgz
+    tags:
+      - geospatial
+      - stack
+  - id: gitops
+    name: gitops
+    kind: stack
+    visibility: public
+    category: gitops
+    description: "gitops stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.tgz
+    tags:
+      - gitops
+      - stack
+  - id: production-readiness
+    name: production-readiness
+    kind: stack
+    visibility: public
+    category: operations
+    description: "production-readiness stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.tgz
+    tags:
+      - production-readiness
+      - stack
   - id: aws-single-node-basic
     name: aws-single-node-basic
     kind: profile
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 594a7c9
+    version: e3c32f4
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-594a7c9.tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-e3c32f4.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -121,17 +303,291 @@ entries:
       - cloud
       - opentofu
       - profile
+  - id: gcp-basic
+    name: gcp-basic
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "gcp-basic profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: e3c32f4
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-e3c32f4.tgz
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: GCP_PROJECT_ID
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Google Cloud project id used for provisioning"
+        - name: GCP_REGION
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Google Cloud region used for the single-node VM"
+        - name: GCP_ZONE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Google Cloud zone used for the single-node VM"
+        - name: GCP_CLUSTER_NAME
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Name used for generated resources and Productive K3S metadata"
+        - name: GCP_MACHINE_TYPE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Compute Engine machine type for the single node"
+        - name: GCP_BOOT_DISK_SIZE_GB
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Boot disk size in GiB"
+        - name: GCP_SSH_PUBLIC_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the SSH public key added to the VM"
+        - name: GCP_SSH_PRIVATE_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the matching private key"
+        - name: GCP_SSH_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach SSH on TCP/22"
+        - name: GCP_HTTP_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach HTTP and HTTPS on TCP/80 and TCP/443"
+        - name: GCP_API_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach the Kubernetes API on TCP/6443"
+        - name: GCP_BASE_DOMAIN
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used to derive service hostnames when explicit hosts are not set"
+        - name: GCP_RANCHER_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for Rancher access"
+        - name: GCP_REGISTRY_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for the in-cluster registry"
+    tags:
+      - cloud
+      - opentofu
+      - profile
+  - id: hetzner-basic
+    name: hetzner-basic
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "hetzner-basic profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: e3c32f4
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-e3c32f4.tgz
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: HCLOUD_TOKEN
+          required: true
+          sensitive: true
+          source: local-override
+          description: "Hetzner Cloud API token used by the OpenTofu provider"
+        - name: HETZNER_LOCATION
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hetzner Cloud location for the single-node VM"
+        - name: HETZNER_CLUSTER_NAME
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Name used for generated resources and Productive K3S metadata"
+        - name: HETZNER_SERVER_TYPE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hetzner Cloud server type for the single node"
+        - name: HETZNER_IMAGE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hetzner Cloud image used for the server"
+        - name: HETZNER_SSH_PUBLIC_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the SSH public key uploaded to Hetzner Cloud"
+        - name: HETZNER_SSH_PRIVATE_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the matching private key"
+        - name: HETZNER_SSH_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach SSH on TCP/22"
+        - name: HETZNER_HTTP_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach HTTP and HTTPS on TCP/80 and TCP/443"
+        - name: HETZNER_API_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach the Kubernetes API on TCP/6443"
+        - name: HETZNER_BASE_DOMAIN
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used to derive service hostnames when explicit hosts are not set"
+        - name: HETZNER_RANCHER_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for Rancher access"
+        - name: HETZNER_REGISTRY_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for the in-cluster registry"
+    tags:
+      - cloud
+      - opentofu
+      - profile
+  - id: oci-arm
+    name: oci-arm
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "oci-arm profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: e3c32f4
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/oci-arm-e3c32f4.tgz
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: OCI_COMPARTMENT_OCID
+          required: true
+          sensitive: false
+          source: local-override
+          description: "OCI compartment OCID where the single ARM node is created"
+        - name: OCI_REGION
+          required: true
+          sensitive: false
+          source: package-default
+          description: "OCI region used for provisioning"
+        - name: OCI_AVAILABILITY_DOMAIN
+          required: false
+          sensitive: false
+          source: local-override
+          description: "Optional OCI availability domain; empty selects the first returned domain"
+        - name: OCI_CLUSTER_NAME
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Name used for generated resources and Productive K3S metadata"
+        - name: OCI_SHAPE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "OCI compute shape for the ARM node"
+        - name: OCI_OCPUS
+          required: true
+          sensitive: false
+          source: package-default
+          description: "OCPU count for the flexible Ampere shape"
+        - name: OCI_MEMORY_IN_GBS
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Memory in GiB for the flexible Ampere shape"
+        - name: OCI_BOOT_VOLUME_SIZE_GB
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Boot volume size in GiB"
+        - name: OCI_IMAGE_OCID
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Ubuntu ARM64 image OCID compatible with the selected region"
+        - name: OCI_SSH_PUBLIC_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the SSH public key added to the VM"
+        - name: OCI_SSH_PRIVATE_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the matching private key"
+        - name: OCI_SSH_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach SSH on TCP/22"
+        - name: OCI_HTTP_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach HTTP and HTTPS on TCP/80 and TCP/443"
+        - name: OCI_API_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach the Kubernetes API on TCP/6443"
+        - name: OCI_BASE_DOMAIN
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used to derive service hostnames when explicit hosts are not set"
+        - name: OCI_RANCHER_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for Rancher access"
+        - name: OCI_REGISTRY_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for the in-cluster registry"
+    tags:
+      - cloud
+      - opentofu
+      - profile
   - id: on-prem-arm
     name: on-prem-arm
     kind: profile
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: 594a7c9
+    version: e3c32f4
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-594a7c9.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-e3c32f4.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -155,11 +611,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: 594a7c9
+    version: e3c32f4
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-594a7c9.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-e3c32f4.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -188,11 +644,11 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: 594a7c9
+    version: e3c32f4
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-594a7c9.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-e3c32f4.tgz
     install:
       requiresLocalOverrides: false
       inputs:
