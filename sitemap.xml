@@ -2,14 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://catalogs.productive-k3s.io/</loc>
-         <lastmod>2026-07-20</lastmod>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
-         <loc>https://catalogs.productive-k3s.io/catalog-format/</loc>
-         <lastmod>2026-07-20</lastmod>
+         <loc>https://catalogs.productive-k3s.io/en/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
     <url>
-         <loc>https://catalogs.productive-k3s.io/catalog/</loc>
-         <lastmod>2026-07-20</lastmod>
+         <loc>https://catalogs.productive-k3s.io/en/product/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://catalogs.productive-k3s.io/en/product/catalog-format/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://catalogs.productive-k3s.io/en/product/catalog/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://catalogs.productive-k3s.io/es/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://catalogs.productive-k3s.io/es/product/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://catalogs.productive-k3s.io/es/product/catalog-format/</loc>
+         <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+         <loc>https://catalogs.productive-k3s.io/es/product/catalog/</loc>
+         <lastmod>2026-09-21</lastmod>
     </url>
 </urlset>
