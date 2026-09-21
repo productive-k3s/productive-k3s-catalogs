@@ -41,8 +41,8 @@ jobs:
 
       - name: Verify custom domain file
         run: |
-          test -f docs/CNAME
-          grep -Fx 'catalogs.productive-k3s.io' docs/CNAME
+          test -f docs/src/CNAME
+          grep -Fx 'catalogs.productive-k3s.io' docs/src/CNAME
 
       - name: Build MkDocs site
         run: make build
@@ -78,8 +78,8 @@ jobs:
 
       - name: Verify custom domain file
         run: |
-          test -f docs/CNAME
-          grep -Fx 'catalogs.productive-k3s.io' docs/CNAME
+          test -f docs/src/CNAME
+          grep -Fx 'catalogs.productive-k3s.io' docs/src/CNAME
 
       - name: Configure Git author
         run: |
