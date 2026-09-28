@@ -6,7 +6,7 @@ LOG_FILE := .mkdocs.log
 	docs-prepare \
 	docs-build docs-serve docs-up docs-down docs-clean \
 	serve build clean \
-	validate sync-catalog sync-theme
+	validate sync-catalog sync-theme test-logs-clean
 
 setup:
 	python3 -m pip install -r requirements.txt
@@ -57,6 +57,10 @@ docs-down:
 docs-clean:
 	rm -rf site
 	rm -f "$(PID_FILE)" "$(LOG_FILE)"
+
+test-logs-clean:
+	rm -rf test-artifacts runs coverage htmlcov .pytest_cache .coverage
+	rm -f coverage.out coverage.txt coverage.xml
 
 serve: docs-serve
 
