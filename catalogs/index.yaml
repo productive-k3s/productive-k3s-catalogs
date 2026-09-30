@@ -2,7 +2,7 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-09-10T13:49:50Z"
+  generatedAt: "2026-09-30T16:02:49Z"
 entries:
   - id: argocd
     name: argocd
@@ -276,11 +276,11 @@ entries:
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: e3c32f4
+    version: 5997d6c
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-e3c32f4.tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-5997d6c.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -309,11 +309,11 @@ entries:
     visibility: public
     category: cloud
     description: "gcp-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: e3c32f4
+    version: 5997d6c
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/gcp-basic-e3c32f4.tgz
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-5997d6c.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -397,11 +397,11 @@ entries:
     visibility: public
     category: cloud
     description: "hetzner-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: e3c32f4
+    version: 5997d6c
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/hetzner-basic-e3c32f4.tgz
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-5997d6c.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -480,11 +480,11 @@ entries:
     visibility: public
     category: cloud
     description: "oci-arm profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: e3c32f4
+    version: 5997d6c
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/oci-arm-e3c32f4.tgz
+      url: https://downloads.productive-k3s.io/infra/oci-arm-5997d6c.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -583,11 +583,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: e3c32f4
+    version: 5997d6c
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-e3c32f4.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-5997d6c.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -611,11 +611,11 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: e3c32f4
+    version: 5997d6c
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-e3c32f4.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-5997d6c.tgz
     install:
       requiresLocalOverrides: true
       inputs:
@@ -638,17 +638,55 @@ entries:
       - edge
       - ansible
       - profile
+  - id: multipass-single-node
+    name: multipass-single-node
+    kind: profile
+    visibility: public
+    category: local
+    description: "multipass-single-node profile packaged for Productive K3S (local, opentofu engine)."
+    version: 5997d6c
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-5997d6c.tgz
+    install:
+      requiresLocalOverrides: false
+      inputs:
+        - name: TF_VAR_cluster_name
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Multipass cluster name"
+        - name: TF_VAR_image
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Multipass image identifier"
+        - name: TF_VAR_base_domain
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used for generated hostnames"
+        - name: TF_VAR_agent_count
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Number of Multipass agent nodes; 0 for single-node validation"
+    tags:
+      - local
+      - opentofu
+      - profile
   - id: multipass-1-server-2-agents
     name: multipass-1-server-2-agents
     kind: profile
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: e3c32f4
+    version: 5997d6c
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-e3c32f4.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-5997d6c.tgz
     install:
       requiresLocalOverrides: false
       inputs:
