@@ -2,7 +2,7 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-09-30T16:02:49Z"
+  generatedAt: "2026-09-30T20:13:42Z"
 entries:
   - id: argocd
     name: argocd
@@ -269,6 +269,51 @@ entries:
       url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.tgz
     tags:
       - production-readiness
+      - stack
+  - id: docker-compose-uptime-kuma
+    name: docker-compose-uptime-kuma
+    kind: stack
+    visibility: public
+    category: adaptation
+    description: "docker-compose-uptime-kuma stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.tgz
+    tags:
+      - docker-compose
+      - adaptation
+      - stack
+  - id: openship-control-plane
+    name: openship-control-plane
+    kind: stack
+    visibility: public
+    category: adaptation
+    description: "openship-control-plane stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.tgz
+    tags:
+      - openship
+      - adaptation
+      - stack
+  - id: openship-whoami-redis
+    name: openship-whoami-redis
+    kind: stack
+    visibility: public
+    category: adaptation
+    description: "openship-whoami-redis stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.tgz
+    tags:
+      - openship
+      - adaptation
       - stack
   - id: aws-single-node-basic
     name: aws-single-node-basic
