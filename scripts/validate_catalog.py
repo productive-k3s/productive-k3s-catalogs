@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 import sys
+import re
 from pathlib import Path
 import yaml
 
 REQUIRED_ENTRY_FIELDS = ["id", "name", "kind", "visibility", "category", "description"]
 ALLOWED_VISIBILITY = {"public", "protected", "private"}
 ALLOWED_KIND = {"addon", "scenario", "profile", "stack"}
+SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
 
 def fail(message: str) -> None:
@@ -62,6 +64,15 @@ def main() -> None:
             commercial = entry.get("commercial", {})
             if not commercial.get("url"):
                 fail(f"protected/private entry {entry['id']} must expose artifact.url or commercial.url")
+
+        if artifact.get("url"):
+            if not SHA256_RE.fullmatch(str(artifact.get("sha256", ""))):
+                fail(f"entry {entry['id']} must expose artifact.sha256")
+            bom = entry.get("bom", {})
+            if not bom.get("url") or bom.get("embeddedPath") != "bom.json":
+                fail(f"entry {entry['id']} must expose bom.url and embedded bom.json")
+            if not SHA256_RE.fullmatch(str(bom.get("sha256", ""))):
+                fail(f"entry {entry['id']} must expose bom.sha256")
 
     print(f"OK: {len(entries)} entries validated")
 

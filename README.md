@@ -72,6 +72,12 @@ The expected flow is:
 4. The CLI reads the catalog to discover available entries.
 5. The MkDocs website renders the same catalog as a marketplace page.
 
+## Software Materials
+
+Published entries include SHA-256 identities for both the TGZ and its resolved
+BOM sidecar, plus the `bom.json` path embedded in the package. Validation
+rejects downloadable entries that omit any of those fields.
+
 ## License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE).

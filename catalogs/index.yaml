@@ -2,7 +2,7 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-09-30T20:13:42Z"
+  generatedAt: "2026-10-01T01:01:45Z"
 entries:
   - id: argocd
     name: argocd
@@ -15,6 +15,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.tgz
+      sha256: 56e7e883bdb1d49445947e8f449f5ca4adf75c60e7208f765f2e0523977e6b82
+    bom:
+      url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.bom.json
+      sha256: ffca1dbfcb559fd36360f8634c47744396f5c2ce887109a2561356211e30af2e
+      embeddedPath: bom.json
     tags:
       - argocd
       - addon
@@ -29,6 +34,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.tgz
+      sha256: d1b41866bd95021ab98fcef5e117c1b2b6b8940e0ebea6437db2e9dd7bf78e05
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.bom.json
+      sha256: 1d66614434727ff7114c44d42575f8f156fc0a161399d85b6e78076d756b4ea2
+      embeddedPath: bom.json
     tags:
       - cert-manager
       - addon
@@ -43,6 +53,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.tgz
+      sha256: de7c725fffd227971a8acab4e22eafa9aa30ff50dce782803ad3e7bc2b95c0f5
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.bom.json
+      sha256: e43e513aa14e1c3c494478a93ac6a8af5d8a3a849e4c3b136e4803e9f7b51697
+      embeddedPath: bom.json
     tags:
       - cloudnative-pg
       - addon
@@ -57,6 +72,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.tgz
+      sha256: a254de7d758bab124642605871fd853127a0cf1dbea6be397d39d07274290f57
+    bom:
+      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.bom.json
+      sha256: 90c2153f01c29906a31c9f0e0b34db3c87c0cf70272a38166271be4445e82dab
+      embeddedPath: bom.json
     tags:
       - geoserver-cloud
       - addon
@@ -71,6 +91,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.tgz
+      sha256: acff95b7823fdbfed58162d909cbaff53bbd893f051ccbdbb83b5406e582914a
+    bom:
+      url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.bom.json
+      sha256: d8c6966cc65f92fcd5c000b98ce30f094f3dbd65fa417e8b1891ce3b217bf05c
+      embeddedPath: bom.json
     tags:
       - kubent
       - addon
@@ -85,6 +110,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.tgz
+      sha256: 8f4118c11415f8b892f0955ff4f05b7a664dc378482d9e69d548d61fb7b0a5d3
+    bom:
+      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.bom.json
+      sha256: 8ddb0bb10572049b909f2762253677535b9cfb8e438ff4f38b619edbaf3f3277
+      embeddedPath: bom.json
     tags:
       - kyverno
       - addon
@@ -99,6 +129,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.tgz
+      sha256: 2451aa5af8b6a03c5183cc6ae4f9758e3e6fe41a830958a919ffdd951cf4a639
+    bom:
+      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.bom.json
+      sha256: 96b98bf3e3c69fe50733ca956686e377b3ee5ac3fe37938b11364ec0381e3c2b
+      embeddedPath: bom.json
     tags:
       - longhorn
       - addon
@@ -113,6 +148,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.tgz
+      sha256: 725ea3913318cff323e9259e0134bba049975523e2934f2e8940bfbd14d4f387
+    bom:
+      url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.bom.json
+      sha256: 471758aefd0663428547b1bd43f3cf3ffec64a5032289c5afb9a0e90f72ec1a4
+      embeddedPath: bom.json
     tags:
       - nginx
       - addon
@@ -127,6 +167,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.tgz
+      sha256: 69ec719e89bb365ef22824831d9284f74cd7fc2121bbd2382b4006f4312b8f5e
+    bom:
+      url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.bom.json
+      sha256: 44625617ebaf875ccf5d0a2b7ee0d8e770f2227876818afd1185eeecc26e3879
+      embeddedPath: bom.json
     tags:
       - popeye
       - addon
@@ -141,6 +186,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.tgz
+      sha256: ad67fdbd56b9c2d9bf932965008b895b12cafe934ac68b7b31c625bf18044955
+    bom:
+      url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.bom.json
+      sha256: e6ee30037dc871fc6297dfa286a0e0905765a23d628035fb68c032baa3b56175
+      embeddedPath: bom.json
     tags:
       - rancher
       - addon
@@ -155,6 +205,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/registry-0.1.0.tgz
+      sha256: a4ad06e0cb75fd87eb5af81b541b3e0da88a422cd113d1f4761f5dbf6acbe439
+    bom:
+      url: https://downloads.productive-k3s.io/addons/registry-0.1.0.bom.json
+      sha256: 4aef2502523097b284841a700db16d1f5c91f97ec6d66a6bb52ba195c28df799
+      embeddedPath: bom.json
     tags:
       - registry
       - addon
@@ -169,6 +224,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.tgz
+      sha256: b18296c6e200d937e51308ac14b1c5b03bbdbaf09add91b003189292ea7743cd
+    bom:
+      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.bom.json
+      sha256: 94a859667ec946fe5d19a05b2127626ec98818cf473917e2bb8efd4b5f29f87c
+      embeddedPath: bom.json
     tags:
       - trivy-operator
       - addon
@@ -183,6 +243,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/base-0.1.0.tgz
+      sha256: 1c1012afd1a96b45b94060caf152472d82b8949c58ce78f0be0e0d740461036b
+    bom:
+      url: https://downloads.productive-k3s.io/addons/base-0.1.0.bom.json
+      sha256: e28553f8cc8b092fba9d1780a175671b2eab6b6c6ab9de79956d9009f6fb7d5f
+      embeddedPath: bom.json
     tags:
       - base
       - stack
@@ -197,6 +262,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.tgz
+      sha256: 6ee62889a19017f379d383e363f21478a67ead01181574ddd8d03bcc0de3a3e1
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.bom.json
+      sha256: 67527f8cbab4ccbf621a02d6294570c1db3e8ff969f2b352ef4aca229c48d724
+      embeddedPath: bom.json
     tags:
       - cluster-health
       - stack
@@ -211,6 +281,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.tgz
+      sha256: 0cdec9ec697b68cc127dc52e0630179af37582a1f65d153f0ea85eb8a1d77f89
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.bom.json
+      sha256: a5d0f43899d75ffc42b1e8e5159f3723d23e7764fd5a76502fdde5ac78179dbb
+      embeddedPath: bom.json
     tags:
       - cluster-security
       - stack
@@ -225,6 +300,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/database-0.1.0.tgz
+      sha256: e43b00ed86c310b7cc1ff7a713131590cbb5181f003c5bad753ea831895d7948
+    bom:
+      url: https://downloads.productive-k3s.io/addons/database-0.1.0.bom.json
+      sha256: f205f4f5a399caa1be0b3e7f02272d9e4afacb66c867892242d8c5c6a8341181
+      embeddedPath: bom.json
     tags:
       - database
       - stack
@@ -239,6 +319,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.tgz
+      sha256: 50a89a3ed0f7251ed29f56aa4f388f2a79cbc1f3059dd54a1c6be5f121fd5664
+    bom:
+      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.bom.json
+      sha256: 68f1161d1db36215425ff693bbe87d90954ce46e509991930785ec1301d1bc65
+      embeddedPath: bom.json
     tags:
       - geospatial
       - stack
@@ -253,6 +338,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.tgz
+      sha256: d0ba19b256403cf72725d45de91f562fa52e92f7e23e38a6af87f0e98176d8fe
+    bom:
+      url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.bom.json
+      sha256: 24eae049ad9c6666da4bcf0e654d0b29f1204d856a172ad547686c1b8565f1d5
+      embeddedPath: bom.json
     tags:
       - gitops
       - stack
@@ -267,6 +357,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.tgz
+      sha256: 17b6ad4357c2b250a6c239b65a86a475c8107431522da454937aefc019448c6c
+    bom:
+      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.bom.json
+      sha256: 9cbea4d18156e16097ad834b9f2b62e5701552b5e474a14723f6e5358b832255
+      embeddedPath: bom.json
     tags:
       - production-readiness
       - stack
@@ -281,6 +376,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.tgz
+      sha256: 2b2f6c7388ce673a17d1a0ae73619a2153e6b360af528164dfd3bdd652117da8
+    bom:
+      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.bom.json
+      sha256: 93c72fd5bbe774e457f0074304320a7944734834f393da8fa92b80fe9516eef5
+      embeddedPath: bom.json
     tags:
       - docker-compose
       - adaptation
@@ -296,6 +396,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.tgz
+      sha256: 89eacdbd84cbd54f1144c6aeabe168b3d3775281d224042cbabaaffce8bfdff9
+    bom:
+      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.bom.json
+      sha256: 61e921fd961dace801b059c7f4e3366936d80eacad1b95cb630bfc0650a8fe5d
+      embeddedPath: bom.json
     tags:
       - openship
       - adaptation
@@ -311,6 +416,11 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.tgz
+      sha256: bab997f3593045dd7c51b322890c131a6d1460936cc642b8ec0318fa4e04a42f
+    bom:
+      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.bom.json
+      sha256: ecc0c7dcdfac7782a174fb1de8872f6f7daeb95bd5bd906b7326495aadcf93e8
+      embeddedPath: bom.json
     tags:
       - openship
       - adaptation
@@ -321,11 +431,16 @@ entries:
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.tgz
+      sha256: 5f2e54f49c26e2389a661c3bb798c73b13340c44ca625b3701b878ea7a3735c6
+    bom:
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.bom.json
+      sha256: a12d19e1fc8419a3f6d5343c6a5b8f0e1040aa12e7187fc39486e68699601c36
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: true
       inputs:
@@ -354,11 +469,16 @@ entries:
     visibility: public
     category: cloud
     description: "gcp-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/gcp-basic-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.tgz
+      sha256: 3e72b5b89666d266a1aea6ae30e918b4f866b9ee2765b79937f74dd3831a917f
+    bom:
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.bom.json
+      sha256: 60ddd23a0e6ca193e94fa58d452e83a6d1d7c15b1dd62eef7785aa4e3c27628e
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: true
       inputs:
@@ -442,11 +562,16 @@ entries:
     visibility: public
     category: cloud
     description: "hetzner-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/hetzner-basic-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.tgz
+      sha256: 65c6982c5a427bc38ac576f6f56ba340e85d840450338a508d3b446fa5fc231d
+    bom:
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.bom.json
+      sha256: 6099a556b709d9630df820a9b17180352831922f58d313bb32564f4f787e4bc1
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: true
       inputs:
@@ -525,11 +650,16 @@ entries:
     visibility: public
     category: cloud
     description: "oci-arm profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/oci-arm-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.tgz
+      sha256: 97bfc87a180d5e2bf90d6f37ab8cf2d641750aeeded40f89e5665e334ac47270
+    bom:
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.bom.json
+      sha256: f130be72370f003c6c49a8ca81ad9969e088b4f2f891af51729fed1321f6ea23
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: true
       inputs:
@@ -628,11 +758,16 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.tgz
+      sha256: 5a49143bc5d8a62adf33141d674591004cd35772e46cdbf9a832a4c3d9100244
+    bom:
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.bom.json
+      sha256: 6db05d6ea47edf5e8c9e9a851bf4222025afcecbcfbbbe988cca969c44e61c7d
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: true
       inputs:
@@ -656,11 +791,16 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.tgz
+      sha256: 6a72f3a93f0940f82e5c5980eb370786820d9599c359483fe902dd83f5384ec6
+    bom:
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.bom.json
+      sha256: c37b15cf2e66eb943f950758f83162296f3eab08bc727a90072b1fdd61ca4778
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: true
       inputs:
@@ -689,11 +829,16 @@ entries:
     visibility: public
     category: local
     description: "multipass-single-node profile packaged for Productive K3S (local, opentofu engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-single-node-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.tgz
+      sha256: 410534c1d3e7578387932978a23db1a926dde4a6dbe56538a0f6133ee39e2ed8
+    bom:
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.bom.json
+      sha256: 1945839a723d5cc3d94adfcaa7e431755efe7186f5433378e07f7c23e98f9bb8
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: false
       inputs:
@@ -727,11 +872,16 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: 5997d6c
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-5997d6c.tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.tgz
+      sha256: b4325e6db642bec74aa9774c0b0e8ad7abac1b15e4d7f66941ba54c186b50c05
+    bom:
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.bom.json
+      sha256: 9debed67b0bc3ebdc440361b3d9a3619a358d1ba048e0dc634be4d660836ea25
+      embeddedPath: bom.json
     install:
       requiresLocalOverrides: false
       inputs:
