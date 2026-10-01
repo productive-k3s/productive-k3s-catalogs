@@ -4,21 +4,23 @@ import shutil
 import sys
 
 
-def fail(message: str) -> None:
-    print(f"ERROR: {message}", file=sys.stderr)
-    sys.exit(1)
+def sync_catalog(root: Path) -> Path:
+    source = root / "catalogs" / "index.yaml"
+    target = root / "docs" / "src" / "catalogs" / "index.yaml"
+    if not source.exists():
+        raise FileNotFoundError(f"catalog source not found: {source}")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(source, target)
+    return target
 
 
 def main() -> None:
     root = Path(__file__).resolve().parent.parent
-    source = root / "catalogs" / "index.yaml"
-    target = root / "docs" / "src" / "catalogs" / "index.yaml"
-
-    if not source.exists():
-      fail(f"catalog source not found: {source}")
-
-    target.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, target)
+    try:
+        target = sync_catalog(root)
+    except FileNotFoundError as exc:
+        print(f"ERROR: {exc}", file=sys.stderr)
+        raise SystemExit(1) from exc
     print(f"Synced catalog into docs: {target}")
 
 

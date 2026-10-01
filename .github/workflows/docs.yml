@@ -31,10 +31,13 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r requirements-test.txt
 
       - name: Validate catalog
         run: make validate
+
+      - name: Test catalog scripts and coverage
+        run: make test-coverage
 
       - name: Sync catalog into docs tree
         run: make sync-catalog
