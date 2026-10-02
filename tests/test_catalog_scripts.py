@@ -10,6 +10,16 @@ from scripts.validate_catalog import CatalogValidationError, validate_catalog
 
 
 SHA = "a" * 64
+REVISION = "b" * 40
+
+
+def addon_compatibility():
+    return {
+        "requires": {
+            "core": {"contract": "artifact/v1", "minVersion": "0.9.6", "maxVersionExclusive": "0.10.0"},
+            "kubernetes": {"distros": ["k3s", "rke2"]},
+        }
+    }
 
 
 def entry(**overrides):
@@ -31,6 +41,7 @@ def write_catalog(tmp_path: Path, entries=None, **overrides) -> Path:
     data = {
         "apiVersion": "catalogs.productive-k3s.io/v1alpha1",
         "kind": "ProductiveK3SCatalog",
+        "metadata": {"name": "test", "version": "0.9.65"},
         "entries": entries if entries is not None else [entry()],
     }
     data.update(overrides)
@@ -42,6 +53,37 @@ def write_catalog(tmp_path: Path, entries=None, **overrides) -> Path:
 def test_accepts_public_artifact_and_commercial_entry(tmp_path):
     commercial = entry(id="pro", visibility="private", artifact={}, commercial={"url": "https://example.test/buy"})
     assert validate_catalog(write_catalog(tmp_path, [entry(), commercial])) == 2
+
+
+def test_accepts_compatibility_aware_catalog(tmp_path):
+    compatible = entry(sourceRevision=REVISION, compatibility=addon_compatibility())
+    assert validate_catalog(write_catalog(tmp_path, [compatible])) == 1
+
+
+def test_rejects_mixed_legacy_and_compatibility_entries(tmp_path):
+    compatible = entry(id="compatible", sourceRevision=REVISION, compatibility=addon_compatibility())
+    with pytest.raises(CatalogValidationError, match="cannot mix"):
+        validate_catalog(write_catalog(tmp_path, [compatible, entry(id="legacy")]))
+
+
+def test_rejects_unknown_contract_and_invalid_window(tmp_path):
+    compatibility = addon_compatibility()
+    compatibility["requires"]["core"]["contract"] = "artifact/v2"
+    value = entry(sourceRevision=REVISION, compatibility=compatibility)
+    with pytest.raises(CatalogValidationError, match="artifact/v1"):
+        validate_catalog(write_catalog(tmp_path, [value]))
+
+    compatibility = addon_compatibility()
+    compatibility["requires"]["core"]["maxVersionExclusive"] = "0.9.6"
+    value = entry(sourceRevision=REVISION, compatibility=compatibility)
+    with pytest.raises(CatalogValidationError, match="non-empty"):
+        validate_catalog(write_catalog(tmp_path, [value]))
+
+
+def test_rejects_compatibility_catalog_without_semantic_snapshot_version(tmp_path):
+    compatible = entry(sourceRevision=REVISION, compatibility=addon_compatibility())
+    with pytest.raises(CatalogValidationError, match="metadata.version"):
+        validate_catalog(write_catalog(tmp_path, [compatible], metadata={"name": "test"}))
 
 
 @pytest.mark.parametrize(

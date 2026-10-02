@@ -78,6 +78,16 @@ Published entries include SHA-256 identities for both the TGZ and its resolved
 BOM sidecar, plus the `bom.json` path embedded in the package. Validation
 rejects downloadable entries that omit any of those fields.
 
+Compatibility-aware entries also copy the artifact's immutable
+`sourceRevision` and complete `compatibility.requires` block. A catalog cannot
+mix legacy and compatibility-aware entries. Core and Infra remain authoritative
+for direct TGZ execution; the CLI uses the copied metadata only as an early
+preflight before download and delegation.
+
+Released catalogs live at `catalogs/<catalog-version>/index.yaml` with a
+checksum sidecar. That path is immutable. `catalogs/index.yaml` remains only a
+mutable discovery alias and must not be the default source of a released CLI.
+
 ## License
 
 This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE).
