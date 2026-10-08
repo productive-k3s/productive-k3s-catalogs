@@ -6,7 +6,7 @@ LOG_FILE := .mkdocs.log
 	docs-prepare \
 	docs-build docs-serve docs-up docs-down docs-clean \
 	serve build clean \
-	validate sync-catalog sync-theme test-logs-clean
+	validate test test-coverage sync-catalog sync-theme test-logs-clean
 
 setup:
 	python3 -m pip install -r requirements.txt
@@ -68,6 +68,12 @@ build: docs-build
 
 validate:
 	python3 scripts/validate_catalog.py catalogs/index.yaml
+
+test:
+	python3 -m pytest -q
+
+test-coverage:
+	python3 -m pytest --cov=scripts --cov-report=term-missing --cov-report=xml:coverage.xml --cov-fail-under=80
 
 sync-catalog:
 	python3 scripts/sync_catalog_docs.py
