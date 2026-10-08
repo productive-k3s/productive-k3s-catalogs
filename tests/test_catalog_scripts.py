@@ -125,12 +125,24 @@ def test_rejects_missing_and_non_object_catalog(tmp_path):
         validate_catalog(path)
 
 
-def test_sync_catalog_copies_source_and_creates_parent(tmp_path):
+def test_sync_catalog_copies_alias_and_immutable_snapshots(tmp_path):
     source = tmp_path / "catalogs" / "index.yaml"
     source.parent.mkdir()
     source.write_text("entries: []\n")
+    snapshot = source.parent / "0.9.65" / "index.yaml"
+    snapshot.parent.mkdir()
+    snapshot.write_text("metadata:\n  version: 0.9.65\n")
+    checksum = snapshot.with_suffix(".yaml.sha256")
+    checksum.write_text("a" * 64 + "  index.yaml\n")
+    stale = tmp_path / "docs" / "src" / "catalogs" / "stale.yaml"
+    stale.parent.mkdir(parents=True)
+    stale.write_text("stale\n")
+
     target = sync_catalog(tmp_path)
     assert target.read_text() == source.read_text()
+    assert (target.parent / "0.9.65" / "index.yaml").read_text() == snapshot.read_text()
+    assert (target.parent / "0.9.65" / "index.yaml.sha256").read_text() == checksum.read_text()
+    assert not stale.exists()
 
 
 def test_sync_catalog_rejects_missing_source(tmp_path):

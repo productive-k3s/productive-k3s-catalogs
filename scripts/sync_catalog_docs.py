@@ -5,13 +5,15 @@ import sys
 
 
 def sync_catalog(root: Path) -> Path:
-    source = root / "catalogs" / "index.yaml"
-    target = root / "docs" / "src" / "catalogs" / "index.yaml"
-    if not source.exists():
-        raise FileNotFoundError(f"catalog source not found: {source}")
-    target.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, target)
-    return target
+    source_dir = root / "catalogs"
+    source_index = source_dir / "index.yaml"
+    target_dir = root / "docs" / "src" / "catalogs"
+    if not source_index.exists():
+        raise FileNotFoundError(f"catalog source not found: {source_index}")
+    if target_dir.exists():
+        shutil.rmtree(target_dir)
+    shutil.copytree(source_dir, target_dir)
+    return target_dir / "index.yaml"
 
 
 def main() -> None:
