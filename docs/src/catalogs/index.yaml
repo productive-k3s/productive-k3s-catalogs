@@ -2,7 +2,8 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  generatedAt: "2026-10-01T01:01:45Z"
+  version: 0.9.65
+  generatedAt: "2026-10-02T15:44:40Z"
 entries:
   - id: argocd
     name: argocd
@@ -15,11 +16,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.tgz
-      sha256: 56e7e883bdb1d49445947e8f449f5ca4adf75c60e7208f765f2e0523977e6b82
+      sha256: 937c93a0be1214eca97991ce25985b3e71bbc41f8d9a129fb4bd57b46cb23325
     bom:
       url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.bom.json
-      sha256: ffca1dbfcb559fd36360f8634c47744396f5c2ce887109a2561356211e30af2e
+      sha256: 6e6c9743ea7fd9b5861b39ec7ce4ef102bd03fad3f8bbda364d52cd72607d2e7
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - argocd
       - addon
@@ -34,11 +46,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.tgz
-      sha256: d1b41866bd95021ab98fcef5e117c1b2b6b8940e0ebea6437db2e9dd7bf78e05
+      sha256: f22a714532091ed28b481312c8f77495667bf27a2026d09bf3cf46c27d96cb5a
     bom:
       url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.bom.json
-      sha256: 1d66614434727ff7114c44d42575f8f156fc0a161399d85b6e78076d756b4ea2
+      sha256: fdcc362f21fc626dd0df32c31662b42a8f9121a619adb9fdac877258b8272241
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - cert-manager
       - addon
@@ -53,11 +76,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.tgz
-      sha256: de7c725fffd227971a8acab4e22eafa9aa30ff50dce782803ad3e7bc2b95c0f5
+      sha256: 59a5e50da578b7329060e85cd7bd4fef6a746c707688ef2000de380101adc748
     bom:
       url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.bom.json
-      sha256: e43e513aa14e1c3c494478a93ac6a8af5d8a3a849e4c3b136e4803e9f7b51697
+      sha256: 75f1797d99fa5018ce112e6f2030f0e6294e691410b6083ae4976b1041c18488
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - cloudnative-pg
       - addon
@@ -72,11 +106,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.tgz
-      sha256: a254de7d758bab124642605871fd853127a0cf1dbea6be397d39d07274290f57
+      sha256: 9e29967d5a2ae3ccb7b3a6d239fda86634ecaea93d57e3ba1e4130102e68fbee
     bom:
       url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.bom.json
-      sha256: 90c2153f01c29906a31c9f0e0b34db3c87c0cf70272a38166271be4445e82dab
+      sha256: 580792c5a713035582bbcf3c91eb7f296d73b35498a02bbc2bdbf68ededd3741
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - geoserver-cloud
       - addon
@@ -91,11 +136,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.tgz
-      sha256: acff95b7823fdbfed58162d909cbaff53bbd893f051ccbdbb83b5406e582914a
+      sha256: 9545938e1fea76fa55a45dbfaa84546bd614ff9b5cbd1f224d1a040d56065d34
     bom:
       url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.bom.json
-      sha256: d8c6966cc65f92fcd5c000b98ce30f094f3dbd65fa417e8b1891ce3b217bf05c
+      sha256: 22da648033431800f61dc722bf7b8da100390fa97a34ba070cf2105f0f9e5aef
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - kubent
       - addon
@@ -110,11 +166,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.tgz
-      sha256: 8f4118c11415f8b892f0955ff4f05b7a664dc378482d9e69d548d61fb7b0a5d3
+      sha256: 8bcff8b40c6a11e4395268782884700e553ce14e6b41c46afd258995404e53c1
     bom:
       url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.bom.json
-      sha256: 8ddb0bb10572049b909f2762253677535b9cfb8e438ff4f38b619edbaf3f3277
+      sha256: 3b37c2a7359ecb73bcbd126457c5d8c038bd3780261670d2ce297e625d2e3fcd
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - kyverno
       - addon
@@ -129,11 +196,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.tgz
-      sha256: 2451aa5af8b6a03c5183cc6ae4f9758e3e6fe41a830958a919ffdd951cf4a639
+      sha256: 92f0fefa1a2282075fb4af9bc5515f159efddfda494546f68ab7dd576475e0e5
     bom:
       url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.bom.json
-      sha256: 96b98bf3e3c69fe50733ca956686e377b3ee5ac3fe37938b11364ec0381e3c2b
+      sha256: ac7a12bfc5db0438a7045b1e5ec16f46e56cb337057dd20ff6cbd2e068141818
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - longhorn
       - addon
@@ -148,11 +226,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.tgz
-      sha256: 725ea3913318cff323e9259e0134bba049975523e2934f2e8940bfbd14d4f387
+      sha256: 17512c09ebdf5b223ce948b129f521b821485eb8582027887ce35022c7e7fa2d
     bom:
       url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.bom.json
-      sha256: 471758aefd0663428547b1bd43f3cf3ffec64a5032289c5afb9a0e90f72ec1a4
+      sha256: 9d23e1da43ef31b0b96d5fa2806e4f13a3e5bc98f254b990830f2b3427efc15c
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - nginx
       - addon
@@ -167,11 +256,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.tgz
-      sha256: 69ec719e89bb365ef22824831d9284f74cd7fc2121bbd2382b4006f4312b8f5e
+      sha256: f46275a2c768d9547a05d5367bd6c099569d971c7685deb287485439aa62ea89
     bom:
       url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.bom.json
-      sha256: 44625617ebaf875ccf5d0a2b7ee0d8e770f2227876818afd1185eeecc26e3879
+      sha256: 3f57df5cce1ed351567f089d12a192068ca1e9dacd120177cf14b4149f21ef88
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - popeye
       - addon
@@ -186,11 +286,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.tgz
-      sha256: ad67fdbd56b9c2d9bf932965008b895b12cafe934ac68b7b31c625bf18044955
+      sha256: 1de36c932cd630c17814c0e6cf519e70070e6fc6d37bfe7ef788c789517f343d
     bom:
       url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.bom.json
-      sha256: e6ee30037dc871fc6297dfa286a0e0905765a23d628035fb68c032baa3b56175
+      sha256: d8363348924afcdbf59726345f9d93aef9743a5045df0e86b9fb48c7b76af0c1
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - rancher
       - addon
@@ -205,11 +316,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/registry-0.1.0.tgz
-      sha256: a4ad06e0cb75fd87eb5af81b541b3e0da88a422cd113d1f4761f5dbf6acbe439
+      sha256: 946040b199840d961eee4b6ba2b450b739fc8e5f9b2fdb876ae99e1c98d83ed7
     bom:
       url: https://downloads.productive-k3s.io/addons/registry-0.1.0.bom.json
-      sha256: 4aef2502523097b284841a700db16d1f5c91f97ec6d66a6bb52ba195c28df799
+      sha256: f5cf7c69812f45609647698aedee8aa8a6f6f1bc4d2d1e9869a3d7d61c4d5924
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - registry
       - addon
@@ -224,11 +346,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.tgz
-      sha256: b18296c6e200d937e51308ac14b1c5b03bbdbaf09add91b003189292ea7743cd
+      sha256: 53389c7102e5491d90dbe9064fa7e7fe8493c732a8d98d516e73e2526cdef18b
     bom:
       url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.bom.json
-      sha256: 94a859667ec946fe5d19a05b2127626ec98818cf473917e2bb8efd4b5f29f87c
+      sha256: 36ff3fbb7ec1b06ec2603a38f32511c85136e0d0aeeb1ec85e71dc4dd1c4996b
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - trivy-operator
       - addon
@@ -243,11 +376,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/base-0.1.0.tgz
-      sha256: 1c1012afd1a96b45b94060caf152472d82b8949c58ce78f0be0e0d740461036b
+      sha256: b7e4dd03b11f5128e3bea981bb34dcefab44b38205978ca5935f7810aff7e440
     bom:
       url: https://downloads.productive-k3s.io/addons/base-0.1.0.bom.json
-      sha256: e28553f8cc8b092fba9d1780a175671b2eab6b6c6ab9de79956d9009f6fb7d5f
+      sha256: bd185ce15de68be59f10d727db5a80f9bd410923af131a89db0de0d1c1c56aa2
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - base
       - stack
@@ -262,11 +406,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.tgz
-      sha256: 6ee62889a19017f379d383e363f21478a67ead01181574ddd8d03bcc0de3a3e1
+      sha256: d8aaf237df05ba1d71178a7084b67222412e36541a19f45c825851a69f37be86
     bom:
       url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.bom.json
-      sha256: 67527f8cbab4ccbf621a02d6294570c1db3e8ff969f2b352ef4aca229c48d724
+      sha256: da30b5cc28089357d2315af11d2f727d993c18373f7f602a0e640c3ce369ed40
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - cluster-health
       - stack
@@ -281,11 +436,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.tgz
-      sha256: 0cdec9ec697b68cc127dc52e0630179af37582a1f65d153f0ea85eb8a1d77f89
+      sha256: 9563a723114be1511e5e95231cc080ba7a6a5fe7c9df5a9f028dc50e821465c1
     bom:
       url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.bom.json
-      sha256: a5d0f43899d75ffc42b1e8e5159f3723d23e7764fd5a76502fdde5ac78179dbb
+      sha256: 354010fefe5201bc1f2644c64c13ec66899ed1bd33216eeb666d60ffca8be434
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - cluster-security
       - stack
@@ -300,11 +466,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/database-0.1.0.tgz
-      sha256: e43b00ed86c310b7cc1ff7a713131590cbb5181f003c5bad753ea831895d7948
+      sha256: 9d4e0d385cfd8e85b916d695093dd6355bbeb3dc1e2d064aa050f08465f0953d
     bom:
       url: https://downloads.productive-k3s.io/addons/database-0.1.0.bom.json
-      sha256: f205f4f5a399caa1be0b3e7f02272d9e4afacb66c867892242d8c5c6a8341181
+      sha256: e45a8ce3c12047ce82acc73d9480b92bce75698a3465de28077c7dfbef05f19c
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - database
       - stack
@@ -319,11 +496,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.tgz
-      sha256: 50a89a3ed0f7251ed29f56aa4f388f2a79cbc1f3059dd54a1c6be5f121fd5664
+      sha256: 587b3adbc5a51edd6140c0a82f4369315e0c8314c52da72ba963c082bf2f08d3
     bom:
       url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.bom.json
-      sha256: 68f1161d1db36215425ff693bbe87d90954ce46e509991930785ec1301d1bc65
+      sha256: 1cee6fded0bbc22f16cef2ea426579300090efe02d0f60afba40eaac8ddd51d1
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - geospatial
       - stack
@@ -338,11 +526,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.tgz
-      sha256: d0ba19b256403cf72725d45de91f562fa52e92f7e23e38a6af87f0e98176d8fe
+      sha256: 848fbd42437f070b55d7971cb95de1bd10f8a503fcc0c609c2d20527db567501
     bom:
       url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.bom.json
-      sha256: 24eae049ad9c6666da4bcf0e654d0b29f1204d856a172ad547686c1b8565f1d5
+      sha256: dc5b0cd1f4d68457c255060a382c13aee1e5cf7948eedc562a7356cb277a1d6e
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - gitops
       - stack
@@ -357,11 +556,22 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.tgz
-      sha256: 17b6ad4357c2b250a6c239b65a86a475c8107431522da454937aefc019448c6c
+      sha256: 8275e099616257bf040ae4daa0f4c69e25414ca1f604e22baf2658143e5f31fd
     bom:
       url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.bom.json
-      sha256: 9cbea4d18156e16097ad834b9f2b62e5701552b5e474a14723f6e5358b832255
+      sha256: 4a5aadd23e5bb8f6484eb48460ffe6a068f92e970e8e33c09e6d42cc50ce2bf5
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
     tags:
       - production-readiness
       - stack
@@ -376,11 +586,21 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.tgz
-      sha256: 2b2f6c7388ce673a17d1a0ae73619a2153e6b360af528164dfd3bdd652117da8
+      sha256: c03b87b89acc3a33094ea7515cd939a0b97e40dcfd70a842ce7e41c6c3b4c66c
     bom:
       url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.bom.json
-      sha256: 93c72fd5bbe774e457f0074304320a7944734834f393da8fa92b80fe9516eef5
+      sha256: aea5accb112302aad8ea4942815a8bad8ad857cd8b89c5a43e1dc41f5e340a3e
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
     tags:
       - docker-compose
       - adaptation
@@ -396,11 +616,21 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.tgz
-      sha256: 89eacdbd84cbd54f1144c6aeabe168b3d3775281d224042cbabaaffce8bfdff9
+      sha256: a066ffb82e7fb1cc70fa93256cf757c215c4392345b0ff0a29340b8820d5fb80
     bom:
       url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.bom.json
-      sha256: 61e921fd961dace801b059c7f4e3366936d80eacad1b95cb630bfc0650a8fe5d
+      sha256: ae4c70713303aa712cc6e354a585674f59c78e8f6a8e21e823ef57e74524c0f5
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
     tags:
       - openship
       - adaptation
@@ -416,11 +646,21 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.tgz
-      sha256: bab997f3593045dd7c51b322890c131a6d1460936cc642b8ec0318fa4e04a42f
+      sha256: de3fad94525307968d5a496ca9d86081fb91c0a7390e145c887569a11dd73b43
     bom:
       url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.bom.json
-      sha256: ecc0c7dcdfac7782a174fb1de8872f6f7daeb95bd5bd906b7326495aadcf93e8
+      sha256: fcadec09afd1f0360595794add305ac9376890801800017ea6804dc7febec41a
       embeddedPath: bom.json
+    sourceRevision: 2d4a5bb41d20756cd46f67bf757d143e90c7147c
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
     tags:
       - openship
       - adaptation
@@ -436,11 +676,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.tgz
-      sha256: 5f2e54f49c26e2389a661c3bb798c73b13340c44ca625b3701b878ea7a3735c6
+      sha256: 22f2fb40757ba2c272c12845393753e6fd496ccc3823a4372418e90cdebb55e0
     bom:
       url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.bom.json
-      sha256: a12d19e1fc8419a3f6d5343c6a5b8f0e1040aa12e7187fc39486e68699601c36
+      sha256: 85b4c0ff0e624642f7de148c4fdebbf93cf7f7ce87443663905b978afe7f7306
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: true
       inputs:
@@ -474,11 +728,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.tgz
-      sha256: 3e72b5b89666d266a1aea6ae30e918b4f866b9ee2765b79937f74dd3831a917f
+      sha256: a58630e4ebc516221005708f98a83492e7b171e00eefb0a38796999c8ea7aee2
     bom:
       url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.bom.json
-      sha256: 60ddd23a0e6ca193e94fa58d452e83a6d1d7c15b1dd62eef7785aa4e3c27628e
+      sha256: 0201aa53f601d168bb7e80cbdbe90fb0483b3bb2f959e6e3c243dfc09eeeebb6
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: true
       inputs:
@@ -567,11 +835,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.tgz
-      sha256: 65c6982c5a427bc38ac576f6f56ba340e85d840450338a508d3b446fa5fc231d
+      sha256: 2687160f858dead168393a7113a6935e1410a17f9f8a0fac1df7c307a9a4f3a6
     bom:
       url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.bom.json
-      sha256: 6099a556b709d9630df820a9b17180352831922f58d313bb32564f4f787e4bc1
+      sha256: 8be65f7ff6db3765884df706e12bff8357973a72c2846332cd56ea758b015479
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: true
       inputs:
@@ -655,11 +937,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.tgz
-      sha256: 97bfc87a180d5e2bf90d6f37ab8cf2d641750aeeded40f89e5665e334ac47270
+      sha256: 8fe257b5543e1d3857a9551fb2f0cfda4e2150684e70752868ee94fff24001f2
     bom:
       url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.bom.json
-      sha256: f130be72370f003c6c49a8ca81ad9969e088b4f2f891af51729fed1321f6ea23
+      sha256: b7ad1042953c0f56c7239d8d3de8399548c18cbb18b970ac88c22a8c2113d2bf
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: true
       inputs:
@@ -763,11 +1059,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.tgz
-      sha256: 5a49143bc5d8a62adf33141d674591004cd35772e46cdbf9a832a4c3d9100244
+      sha256: fd9e426c53bcc7c53a2239b236b4748e40e175b40970de9b0693a09eb42600f9
     bom:
       url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.bom.json
-      sha256: 6db05d6ea47edf5e8c9e9a851bf4222025afcecbcfbbbe988cca969c44e61c7d
+      sha256: 6f45e0bf3648c44fbec78371c788df67e2e4302b3dba07a1d83ba28c212a5401
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: true
       inputs:
@@ -796,11 +1106,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.tgz
-      sha256: 6a72f3a93f0940f82e5c5980eb370786820d9599c359483fe902dd83f5384ec6
+      sha256: 389326bacee76a0609a7d9fec5fdeadea1ad333ed841fe237fab1d940cc282a7
     bom:
       url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.bom.json
-      sha256: c37b15cf2e66eb943f950758f83162296f3eab08bc727a90072b1fdd61ca4778
+      sha256: b8e07f2ceb3d84a5ef405234fae31c0a5b66b572c2dd7866257db0798d5ab3ef
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: true
       inputs:
@@ -834,11 +1158,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.tgz
-      sha256: 410534c1d3e7578387932978a23db1a926dde4a6dbe56538a0f6133ee39e2ed8
+      sha256: b020afb30a102db2ad20d9a5f742dfb48295d8245a188eb14629e3ec535ae93f
     bom:
       url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.bom.json
-      sha256: 1945839a723d5cc3d94adfcaa7e431755efe7186f5433378e07f7c23e98f9bb8
+      sha256: 2cba7806a35fb88284ec0150128512de6a278eea0d32a6029c4bd6d0d35cb2de
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: false
       inputs:
@@ -877,11 +1215,25 @@ entries:
     artifact:
       type: tgz
       url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.tgz
-      sha256: b4325e6db642bec74aa9774c0b0e8ad7abac1b15e4d7f66941ba54c186b50c05
+      sha256: 5a0c7e45e874af9a5668483dd751f71596553ea7423d1c9c355176aecc2a95df
     bom:
       url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.bom.json
-      sha256: 9debed67b0bc3ebdc440361b3d9a3619a358d1ba048e0dc634be4d660836ea25
+      sha256: 7a6b447dc6c5c077f20bad5bada4bdbefdcc9664d6b4429e8ee41619b2ab5496
       embeddedPath: bom.json
+    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
     install:
       requiresLocalOverrides: false
       inputs:
