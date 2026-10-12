@@ -46,7 +46,26 @@ install:
       description: Existing AWS EC2 key pair name
 ```
 
-Este resumen lo genera `productive-k3s-ops` a partir de metadata de profiles que vive junto a los `*.env` fuente en los repositorios de Infra. Está pensado para discovery y UX, no como reemplazo del manifiesto del paquete.
+Los Profiles también pueden exponer el contrato de runtime copiado desde su
+manifiesto empaquetado:
+
+```yaml
+runtime:
+  executionScope: local-host
+  requiredCapabilities:
+    - local-virtualization
+  requiredCommands:
+    - multipass
+    - tofu
+```
+
+Los clientes usan este bloque para evaluar si el entorno actual puede ejecutar
+el Profile. El vocabulario describe capacidades y comandos, no nombres de
+Profiles.
+
+Estos resúmenes los genera `productive-k3s-ops` desde la metadata del paquete
+de Profile. Están pensados para discovery y UX, no como reemplazo del
+manifiesto del paquete.
 
 Las entradas protegidas pueden omitir la URL directa del artifact y exponer en cambio una acción comercial:
 

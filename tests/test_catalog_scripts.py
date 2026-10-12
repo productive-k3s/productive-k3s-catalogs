@@ -22,6 +22,14 @@ def addon_compatibility():
     }
 
 
+def profile_runtime():
+    return {
+        "executionScope": "local-host",
+        "requiredCapabilities": ["local-virtualization"],
+        "requiredCommands": ["multipass", "tofu"],
+    }
+
+
 def entry(**overrides):
     value = {
         "id": "demo",
@@ -58,6 +66,35 @@ def test_accepts_public_artifact_and_commercial_entry(tmp_path):
 def test_accepts_compatibility_aware_catalog(tmp_path):
     compatible = entry(sourceRevision=REVISION, compatibility=addon_compatibility())
     assert validate_catalog(write_catalog(tmp_path, [compatible])) == 1
+
+
+def test_accepts_profile_runtime_metadata(tmp_path):
+    value = entry(kind="profile", runtime=profile_runtime())
+    assert validate_catalog(write_catalog(tmp_path, [value])) == 1
+
+
+@pytest.mark.parametrize(
+    ("runtime", "message"),
+    [
+        ({}, "executionScope"),
+        ({**profile_runtime(), "executionScope": "container"}, "executionScope"),
+        ({**profile_runtime(), "requiredCapabilities": []}, "requiredCapabilities"),
+        ({**profile_runtime(), "requiredCapabilities": ["nested-magic"]}, "unsupported runtime capability"),
+        ({**profile_runtime(), "requiredCapabilities": ["local-virtualization", "local-virtualization"]}, "duplicate runtime capabilities"),
+        ({**profile_runtime(), "requiredCommands": []}, "requiredCommands"),
+        ({**profile_runtime(), "requiredCommands": ["bad command"]}, "invalid required command"),
+        ({**profile_runtime(), "requiredCommands": ["tofu", "tofu"]}, "duplicate required commands"),
+    ],
+)
+def test_rejects_invalid_profile_runtime_metadata(tmp_path, runtime, message):
+    value = entry(kind="profile", runtime=runtime)
+    with pytest.raises(CatalogValidationError, match=message):
+        validate_catalog(write_catalog(tmp_path, [value]))
+
+
+def test_rejects_runtime_metadata_on_non_profile_entry(tmp_path):
+    with pytest.raises(CatalogValidationError, match="only valid for profiles"):
+        validate_catalog(write_catalog(tmp_path, [entry(runtime=profile_runtime())]))
 
 
 def test_rejects_mixed_legacy_and_compatibility_entries(tmp_path):
