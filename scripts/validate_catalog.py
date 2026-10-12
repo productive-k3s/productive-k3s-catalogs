@@ -9,6 +9,9 @@ ALLOWED_VISIBILITY = {"public", "protected", "private"}
 ALLOWED_KIND = {"addon", "scenario", "profile", "stack"}
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 SOURCE_REVISION_RE = re.compile(r"^[0-9a-f]{40}$")
+COMMAND_RE = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9._+-]*$")
+ALLOWED_EXECUTION_SCOPES = {"cloud-api", "local-host", "remote-host"}
+ALLOWED_RUNTIME_CAPABILITIES = {"cloud-api", "local-virtualization", "remote-ssh"}
 
 
 class CatalogValidationError(ValueError):
@@ -60,6 +63,10 @@ def validate_catalog(path: Path) -> int:
                 compatibility_entries += 1
                 require(bool(SOURCE_REVISION_RE.fullmatch(str(entry.get("sourceRevision", "")))), f"entry {entry['id']} must expose an immutable sourceRevision")
                 validate_compatibility(entry["id"], entry["kind"], compatibility)
+            runtime = entry.get("runtime")
+            if runtime is not None:
+                require(entry["kind"] == "profile", f"entry {entry['id']} runtime metadata is only valid for profiles")
+                validate_profile_runtime(entry["id"], runtime)
 
     require(compatibility_entries in {0, len(entries)}, "catalog cannot mix legacy and compatibility-aware entries")
     if compatibility_entries:
@@ -100,6 +107,22 @@ def validate_compatibility(entry_id: str, kind: str, compatibility: object) -> N
     distros = kubernetes.get("distros") if isinstance(kubernetes, dict) else None
     require(isinstance(distros, list) and bool(distros), f"entry {entry_id} requires Kubernetes distros")
     require(set(distros).issubset({"k3s", "rke2"}), f"entry {entry_id} declares an unsupported Kubernetes distro")
+
+
+def validate_profile_runtime(entry_id: str, runtime: object) -> None:
+    require(isinstance(runtime, dict), f"entry {entry_id} runtime must be an object")
+    scope = runtime.get("executionScope")
+    require(scope in ALLOWED_EXECUTION_SCOPES, f"entry {entry_id} has invalid runtime.executionScope")
+
+    capabilities = runtime.get("requiredCapabilities")
+    require(isinstance(capabilities, list) and bool(capabilities), f"entry {entry_id} runtime.requiredCapabilities must be a non-empty list")
+    require(all(isinstance(value, str) and value in ALLOWED_RUNTIME_CAPABILITIES for value in capabilities), f"entry {entry_id} declares an unsupported runtime capability")
+    require(len(capabilities) == len(set(capabilities)), f"entry {entry_id} declares duplicate runtime capabilities")
+
+    commands = runtime.get("requiredCommands")
+    require(isinstance(commands, list) and bool(commands), f"entry {entry_id} runtime.requiredCommands must be a non-empty list")
+    require(all(isinstance(value, str) and COMMAND_RE.fullmatch(value) for value in commands), f"entry {entry_id} declares an invalid required command")
+    require(len(commands) == len(set(commands)), f"entry {entry_id} declares duplicate required commands")
 
 
 def main() -> None:

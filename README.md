@@ -84,6 +84,11 @@ mix legacy and compatibility-aware entries. Core and Infra remain authoritative
 for direct TGZ execution; the CLI uses the copied metadata only as an early
 preflight before download and delegation.
 
+Profile entries may additionally copy the package's `runtime` block. It
+declares an execution scope, generic capabilities, and required commands so a
+client can report local availability before installation. Older immutable
+snapshots without this optional block remain readable.
+
 Released catalogs live at `catalogs/<catalog-version>/index.yaml` with a
 checksum sidecar. That path is immutable. `catalogs/index.yaml` remains only a
 mutable discovery alias and must not be the default source of a released CLI.
