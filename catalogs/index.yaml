@@ -2,8 +2,8 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  version: 0.9.65
-  generatedAt: "2026-10-02T15:44:40Z"
+  version: 0.9.66
+  generatedAt: "2026-10-12T03:27:29Z"
 entries:
   - id: argocd
     name: argocd
@@ -671,17 +671,17 @@ entries:
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.tgz
-      sha256: 22f2fb40757ba2c272c12845393753e6fd496ccc3823a4372418e90cdebb55e0
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.1.tgz
+      sha256: 321eee205c5c103aa019e41b0ab69de54ebd0fff7dd28652c1eb26a8b45b86bc
     bom:
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.bom.json
-      sha256: 85b4c0ff0e624642f7de148c4fdebbf93cf7f7ce87443663905b978afe7f7306
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.1.bom.json
+      sha256: 470278cc18c5c809fdb6de4e29a19aeee7eff669ef5f07bcbaa526e4b45b6edf
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -695,6 +695,13 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
     install:
       requiresLocalOverrides: true
       inputs:
@@ -723,17 +730,17 @@ entries:
     visibility: public
     category: cloud
     description: "gcp-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.tgz
-      sha256: a58630e4ebc516221005708f98a83492e7b171e00eefb0a38796999c8ea7aee2
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.1.tgz
+      sha256: e568224dd29cee0162fee679de4dba73281a48c90f39f49d4f6c04803c954401
     bom:
-      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.bom.json
-      sha256: 0201aa53f601d168bb7e80cbdbe90fb0483b3bb2f959e6e3c243dfc09eeeebb6
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.1.bom.json
+      sha256: 1f61cf5ec7362b973e47abafab9328c60b976226540129333280461a01bfe69c
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -747,6 +754,13 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
     install:
       requiresLocalOverrides: true
       inputs:
@@ -830,17 +844,17 @@ entries:
     visibility: public
     category: cloud
     description: "hetzner-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.tgz
-      sha256: 2687160f858dead168393a7113a6935e1410a17f9f8a0fac1df7c307a9a4f3a6
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.1.tgz
+      sha256: e7d47e55ddefe5f81c53ddc83db81e5e6a17c629df7a8eaa20df909524724dc5
     bom:
-      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.bom.json
-      sha256: 8be65f7ff6db3765884df706e12bff8357973a72c2846332cd56ea758b015479
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.1.bom.json
+      sha256: 9f990a1e5fc70f2c108c83f39af7b28b02453cae93549a29de9c6c9585d98206
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -854,6 +868,13 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
     install:
       requiresLocalOverrides: true
       inputs:
@@ -932,17 +953,17 @@ entries:
     visibility: public
     category: cloud
     description: "oci-arm profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.tgz
-      sha256: 8fe257b5543e1d3857a9551fb2f0cfda4e2150684e70752868ee94fff24001f2
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.1.tgz
+      sha256: 391aa1b435ff303673f55796dd46d5adc30b09217c5abd98a7b4cde3e8ce0cbb
     bom:
-      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.bom.json
-      sha256: b7ad1042953c0f56c7239d8d3de8399548c18cbb18b970ac88c22a8c2113d2bf
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.1.bom.json
+      sha256: 03a4165a88c4833f9074177c33d8c333076053f52086b5c983f7891120f89a81
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -956,6 +977,13 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
     install:
       requiresLocalOverrides: true
       inputs:
@@ -1054,17 +1082,17 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.tgz
-      sha256: fd9e426c53bcc7c53a2239b236b4748e40e175b40970de9b0693a09eb42600f9
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.1.tgz
+      sha256: 80d592065dbba79a19f4f881c2c143e02ffe0a011ac04a3076c88e54223e777a
     bom:
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.bom.json
-      sha256: 6f45e0bf3648c44fbec78371c788df67e2e4302b3dba07a1d83ba28c212a5401
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.1.bom.json
+      sha256: 3527e4de1608d14b13ec4352b31c551cd7cf04ce377418249ab207bb92e7b541
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -1078,6 +1106,19 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: remote-host
+      requiredCapabilities:
+      - remote-ssh
+      requiredCommands:
+      - ansible-playbook
+      - curl
+      - jq
+      - python3
+      - scp
+      - sha256sum
+      - ssh
+      - tar
     install:
       requiresLocalOverrides: true
       inputs:
@@ -1101,17 +1142,17 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.tgz
-      sha256: 389326bacee76a0609a7d9fec5fdeadea1ad333ed841fe237fab1d940cc282a7
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.1.tgz
+      sha256: f0a999fa194af2234e766f2715ecf7368744c94b2723a957651bf49ea223ec8b
     bom:
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.bom.json
-      sha256: b8e07f2ceb3d84a5ef405234fae31c0a5b66b572c2dd7866257db0798d5ab3ef
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.1.bom.json
+      sha256: b1b96cbe87778f58191c73898f5b116dd469ca90a8b343bff031061f3a6c56b2
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -1125,6 +1166,19 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: remote-host
+      requiredCapabilities:
+      - remote-ssh
+      requiredCommands:
+      - ansible-playbook
+      - curl
+      - jq
+      - python3
+      - scp
+      - sha256sum
+      - ssh
+      - tar
     install:
       requiresLocalOverrides: true
       inputs:
@@ -1153,17 +1207,17 @@ entries:
     visibility: public
     category: local
     description: "multipass-single-node profile packaged for Productive K3S (local, opentofu engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.tgz
-      sha256: b020afb30a102db2ad20d9a5f742dfb48295d8245a188eb14629e3ec535ae93f
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.1.tgz
+      sha256: 0905e26b3538405ffd138a013006a8bb12e705e351bf5679fa271314d7e40df4
     bom:
-      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.bom.json
-      sha256: 2cba7806a35fb88284ec0150128512de6a278eea0d32a6029c4bd6d0d35cb2de
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.1.bom.json
+      sha256: 2b74e4763bf82f565b42e3e7b769a1a1c54c28cbcbda50cd22d9bd67f286b1b4
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -1177,6 +1231,20 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: local-host
+      requiredCapabilities:
+      - local-virtualization
+      requiredCommands:
+      - curl
+      - jq
+      - multipass
+      - sha256sum
+      - ssh
+      - ssh-keygen
+      - tar
+      - timeout
+      - tofu
     install:
       requiresLocalOverrides: false
       inputs:
@@ -1210,17 +1278,17 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.tgz
-      sha256: 5a0c7e45e874af9a5668483dd751f71596553ea7423d1c9c355176aecc2a95df
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.1.tgz
+      sha256: 4717fb48add6552b16373039590e7127b907ca74a63723214893728b6247695d
     bom:
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.bom.json
-      sha256: 7a6b447dc6c5c077f20bad5bada4bdbefdcc9664d6b4429e8ee41619b2ab5496
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.1.bom.json
+      sha256: 34b5f2ef1947ec98571997d0be4a9a4f028c73370cb5ce20372010f3b3360107
       embeddedPath: bom.json
-    sourceRevision: 921d33e3eafac7e9b66ec217f6caa9bab8d8293b
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
       requires:
         infra:
@@ -1234,6 +1302,20 @@ entries:
         infra:
         - release: 0.9.65-0.9.6
           core: 0.9.6
+    runtime:
+      executionScope: local-host
+      requiredCapabilities:
+      - local-virtualization
+      requiredCommands:
+      - curl
+      - jq
+      - multipass
+      - sha256sum
+      - ssh
+      - ssh-keygen
+      - tar
+      - timeout
+      - tofu
     install:
       requiresLocalOverrides: false
       inputs:
