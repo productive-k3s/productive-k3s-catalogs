@@ -1,0 +1,1340 @@
+apiVersion: catalogs.productive-k3s.io/v1alpha1
+kind: ProductiveK3SCatalog
+metadata:
+  name: productive-k3s-catalog
+  version: 0.9.67
+  generatedAt: "2026-10-20T01:03:29Z"
+entries:
+  - id: argocd
+    name: argocd
+    kind: addon
+    visibility: public
+    category: gitops
+    description: "argocd addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.tgz
+      sha256: acd555c715b55ce3a0e8f034bfa32d8a01f4a61f026632d45eee6d6572a7e45f
+    bom:
+      url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.bom.json
+      sha256: 924cb12420159f0bc2b2226cb5eed22afc267f976503a79b32791e17b4fa5ac2
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - argocd
+      - addon
+  - id: cert-manager
+    name: cert-manager
+    kind: addon
+    visibility: public
+    category: platform
+    description: "cert-manager addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.tgz
+      sha256: 099af6c6d2de1c7206e3d7a50febf81855098b9922bb8234a47091db84e42a10
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.bom.json
+      sha256: 792079c4f83105930d1a26b02fce3b5df2636d60a05b5329973ca42b65128b45
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - cert-manager
+      - addon
+  - id: cloudnative-pg
+    name: cloudnative-pg
+    kind: addon
+    visibility: public
+    category: database
+    description: "cloudnative-pg addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.tgz
+      sha256: af874f14346fb2042a32e36cd05a2a3969a66a2b75e643707fcb8c068e74801e
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.bom.json
+      sha256: dee57e6cf2795e349bf98214155ba8b97dc76e86537b9808212c74a74a6ca93c
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - cloudnative-pg
+      - addon
+  - id: geoserver-cloud
+    name: geoserver-cloud
+    kind: addon
+    visibility: public
+    category: geospatial
+    description: "geoserver-cloud addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.tgz
+      sha256: e94c387d71eac2f1ea519400f36c774796219d23e5336bd42fd93a113aac83e3
+    bom:
+      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.bom.json
+      sha256: 8214a7d3c22a82c3972bd25239ec0be60cd1aebe3345eb530b745c6e49d9d0bf
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - geoserver-cloud
+      - addon
+  - id: kubent
+    name: kubent
+    kind: addon
+    visibility: public
+    category: operations
+    description: "kubent addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.tgz
+      sha256: dfbc0ecf54b5fcebffa10b841fda15763c85da31ae533d58e6e777d6e44b5646
+    bom:
+      url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.bom.json
+      sha256: 5da20a2d042c9cb7901ef3aae3fa03ea966231fa72b1f3bb545b7dde9c87f9a3
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - kubent
+      - addon
+  - id: kyverno
+    name: kyverno
+    kind: addon
+    visibility: public
+    category: security
+    description: "kyverno addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.tgz
+      sha256: aa4689dd444c758e34751ceaf5b6cf7f9c22c05dc2bb753e43beda67e796628e
+    bom:
+      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.bom.json
+      sha256: 3aaa2c6673fb74e895be7b0e1e8d2580028bd2ed4a0b3985a63e29853186e405
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - kyverno
+      - addon
+  - id: longhorn
+    name: longhorn
+    kind: addon
+    visibility: public
+    category: platform
+    description: "longhorn addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.tgz
+      sha256: c8a43b4da43786a50a7ddf39447bb0876aa9af541aff15e9e812b3edfaa0498b
+    bom:
+      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.bom.json
+      sha256: 598d9550cd0573c6ba4419083a7df1401a935fee4e5bb69dfd68f2c18a99a0e0
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - longhorn
+      - addon
+  - id: nginx
+    name: nginx
+    kind: addon
+    visibility: public
+    category: example
+    description: "nginx addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.tgz
+      sha256: ddbad16bee133f671d9e2932a1eee951f2378ea120fec3159de0eee5d3e619d8
+    bom:
+      url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.bom.json
+      sha256: d040421fc35d3891d9dd09278936102e3aaae191c55bfbd3ec12aa3b7ffdbf56
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - nginx
+      - addon
+  - id: popeye
+    name: popeye
+    kind: addon
+    visibility: public
+    category: operations
+    description: "popeye addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.tgz
+      sha256: b8d38a89f53965b118c05bf4827c5d2ad52e9c9ae8b10cb6672c3ed0cabf3ef0
+    bom:
+      url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.bom.json
+      sha256: 1f0c3e54cb1b4e4d9f3bdce437941c71f70c11c998d6c3ad6776118c8ab5383b
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - popeye
+      - addon
+  - id: rancher
+    name: rancher
+    kind: addon
+    visibility: public
+    category: platform
+    description: "rancher addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.tgz
+      sha256: 55e76468e8f17038b38b761d792b94f50e615515e21ee2292d2049b767f22dfa
+    bom:
+      url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.bom.json
+      sha256: 1eaf09702e0ca901941ea8f7b37e539cbc6a5fc2735551f662abf861b66a276f
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - rancher
+      - addon
+  - id: registry
+    name: registry
+    kind: addon
+    visibility: public
+    category: platform
+    description: "registry addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/registry-0.1.0.tgz
+      sha256: e1b2a5d5e4ca7db4c50d18ba708b568d57cff23d8a392af6f877b7937760d0a1
+    bom:
+      url: https://downloads.productive-k3s.io/addons/registry-0.1.0.bom.json
+      sha256: eea648c74759c7ed513116e7c87f31e06e856a0668db7159f7b299bc71b188d8
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - registry
+      - addon
+  - id: trivy-operator
+    name: trivy-operator
+    kind: addon
+    visibility: public
+    category: security
+    description: "trivy-operator addon packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.tgz
+      sha256: 1568a0f7cba84b4a5f2b3a96efae78b5687f448a20f74027ef71911882ef9e84
+    bom:
+      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.bom.json
+      sha256: 9fa80e3730315ccb7e4348b50956771d2a0f08b4f44387b1d88ce4a78d7c3302
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - trivy-operator
+      - addon
+  - id: base
+    name: base
+    kind: stack
+    visibility: public
+    category: platform
+    description: "base stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/base-0.1.0.tgz
+      sha256: f4618ac222ce47c4daaf599b5a48744973e0348fad56507259cd6625594f6c8c
+    bom:
+      url: https://downloads.productive-k3s.io/addons/base-0.1.0.bom.json
+      sha256: fffdfd89d8c8b2cd2745c905e1ab7ca2b975ba5d6d2817ef2669cb905412115f
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - base
+      - stack
+  - id: cluster-health
+    name: cluster-health
+    kind: stack
+    visibility: public
+    category: operations
+    description: "cluster-health stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.tgz
+      sha256: fe4bb36a0d003b5f222e9e36c1af52bc7b14148fab78311e751e054844c6fcf1
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.bom.json
+      sha256: 32b1a846c1e2a7832d1b2cb9e19b26365f994683f6573d10bdec681befe9b895
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - cluster-health
+      - stack
+  - id: cluster-security
+    name: cluster-security
+    kind: stack
+    visibility: public
+    category: security
+    description: "cluster-security stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.tgz
+      sha256: 771b66313c4e12455d1cb379f2aa70613f197be8a4bd382bf3fb1006c477bb92
+    bom:
+      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.bom.json
+      sha256: 8e37b2bbc488290fab5a4f998dfdc29bdf2df9be7f2bba5a79418fc4e5c898dd
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - cluster-security
+      - stack
+  - id: database
+    name: database
+    kind: stack
+    visibility: public
+    category: database
+    description: "database stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/database-0.1.0.tgz
+      sha256: a3bb3e98adfcb0ee3df30dd624d9c2c77f0927cb999fadfcd4c5e2006d550eee
+    bom:
+      url: https://downloads.productive-k3s.io/addons/database-0.1.0.bom.json
+      sha256: fdd759f394bbc06f3cea0c26be429e3079f4c410163f616d1eb6c6346629fd1e
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - database
+      - stack
+  - id: geospatial
+    name: geospatial
+    kind: stack
+    visibility: public
+    category: geospatial
+    description: "geospatial stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.tgz
+      sha256: 05327b880eaa42ea9ef4cf2ead73443e0e4cdf9110d3a8a8e0dd11d2fcf35333
+    bom:
+      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.bom.json
+      sha256: fa3f68925069335ec2ba9d9a97f0102b94b4a10b6449737b60ea64aac814b838
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - geospatial
+      - stack
+  - id: gitops
+    name: gitops
+    kind: stack
+    visibility: public
+    category: gitops
+    description: "gitops stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.tgz
+      sha256: 7a7b8dc861fcd3d996089cf4528a222fc9d0e9c8c0943f0004bdfa6a74b08aca
+    bom:
+      url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.bom.json
+      sha256: 18c4979e6d1d0b0ab380219ae66fee9716466ca03abe6fc35f56825e3ba78ccf
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - gitops
+      - stack
+  - id: production-readiness
+    name: production-readiness
+    kind: stack
+    visibility: public
+    category: operations
+    description: "production-readiness stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.tgz
+      sha256: 5f78a346c2e7b01bf439017943d76cd577c00e24d085f3e74f6d11c07e6a811e
+    bom:
+      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.bom.json
+      sha256: 969f65950ba74be1a3457dcce2acd75be8049b5c7ed5a486a6728723da0426fd
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+          - rke2
+    tags:
+      - production-readiness
+      - stack
+  - id: docker-compose-uptime-kuma
+    name: docker-compose-uptime-kuma
+    kind: stack
+    visibility: public
+    category: adaptation
+    description: "docker-compose-uptime-kuma stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.tgz
+      sha256: ddf2dccb7f9889052daa84e17e892377cca615c7d8781bd47e43c8fecaeedf74
+    bom:
+      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.bom.json
+      sha256: 5b05e45b95622619ee830c6a4b34492b304fd2abbc0a54b8dee0a3a505dab452
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+    tags:
+      - docker-compose
+      - adaptation
+      - stack
+  - id: openship-control-plane
+    name: openship-control-plane
+    kind: stack
+    visibility: public
+    category: adaptation
+    description: "openship-control-plane stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.tgz
+      sha256: 8e6c0c0491e589f35f9c494dc464f410a7ec1088ed5a7522fc5e934f8656f21d
+    bom:
+      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.bom.json
+      sha256: 6d15b4417885b6afa33569152b5cd01855df8f87977671a503f40c46a7ad5416
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+    tags:
+      - openship
+      - adaptation
+      - stack
+  - id: openship-whoami-redis
+    name: openship-whoami-redis
+    kind: stack
+    visibility: public
+    category: adaptation
+    description: "openship-whoami-redis stack packaged for Productive K3S."
+    version: 0.1.0
+    sourceRepository: productive-k3s-addons
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.tgz
+      sha256: 21290280ca68ff36fffcbb0b1a51f223ddecfa886f9570d5da9831921d3f300e
+    bom:
+      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.bom.json
+      sha256: 92e5c675b4b7fc6d00d427a1800b98f0e0b48bda8e39c3120072580a7b5ecd50
+      embeddedPath: bom.json
+    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    compatibility:
+      requires:
+        core:
+          contract: artifact/v1
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+        kubernetes:
+          distros:
+          - k3s
+    tags:
+      - openship
+      - adaptation
+      - stack
+  - id: aws-single-node-basic
+    name: aws-single-node-basic
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.1.tgz
+      sha256: 321eee205c5c103aa019e41b0ab69de54ebd0fff7dd28652c1eb26a8b45b86bc
+    bom:
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.1.bom.json
+      sha256: 470278cc18c5c809fdb6de4e29a19aeee7eff669ef5f07bcbaa526e4b45b6edf
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: AWS_REGION
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Default AWS region used for provisioning"
+        - name: AWS_KEY_PAIR_NAME
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Existing AWS EC2 key pair name"
+        - name: AWS_SSH_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the matching private key"
+    tags:
+      - cloud
+      - opentofu
+      - profile
+  - id: gcp-basic
+    name: gcp-basic
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "gcp-basic profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.1.tgz
+      sha256: e568224dd29cee0162fee679de4dba73281a48c90f39f49d4f6c04803c954401
+    bom:
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.1.bom.json
+      sha256: 1f61cf5ec7362b973e47abafab9328c60b976226540129333280461a01bfe69c
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: GCP_PROJECT_ID
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Google Cloud project id used for provisioning"
+        - name: GCP_REGION
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Google Cloud region used for the single-node VM"
+        - name: GCP_ZONE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Google Cloud zone used for the single-node VM"
+        - name: GCP_CLUSTER_NAME
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Name used for generated resources and Productive K3S metadata"
+        - name: GCP_MACHINE_TYPE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Compute Engine machine type for the single node"
+        - name: GCP_BOOT_DISK_SIZE_GB
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Boot disk size in GiB"
+        - name: GCP_SSH_PUBLIC_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the SSH public key added to the VM"
+        - name: GCP_SSH_PRIVATE_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the matching private key"
+        - name: GCP_SSH_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach SSH on TCP/22"
+        - name: GCP_HTTP_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach HTTP and HTTPS on TCP/80 and TCP/443"
+        - name: GCP_API_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach the Kubernetes API on TCP/6443"
+        - name: GCP_BASE_DOMAIN
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used to derive service hostnames when explicit hosts are not set"
+        - name: GCP_RANCHER_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for Rancher access"
+        - name: GCP_REGISTRY_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for the in-cluster registry"
+    tags:
+      - cloud
+      - opentofu
+      - profile
+  - id: hetzner-basic
+    name: hetzner-basic
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "hetzner-basic profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.1.tgz
+      sha256: e7d47e55ddefe5f81c53ddc83db81e5e6a17c629df7a8eaa20df909524724dc5
+    bom:
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.1.bom.json
+      sha256: 9f990a1e5fc70f2c108c83f39af7b28b02453cae93549a29de9c6c9585d98206
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: HCLOUD_TOKEN
+          required: true
+          sensitive: true
+          source: local-override
+          description: "Hetzner Cloud API token used by the OpenTofu provider"
+        - name: HETZNER_LOCATION
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hetzner Cloud location for the single-node VM"
+        - name: HETZNER_CLUSTER_NAME
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Name used for generated resources and Productive K3S metadata"
+        - name: HETZNER_SERVER_TYPE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hetzner Cloud server type for the single node"
+        - name: HETZNER_IMAGE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hetzner Cloud image used for the server"
+        - name: HETZNER_SSH_PUBLIC_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the SSH public key uploaded to Hetzner Cloud"
+        - name: HETZNER_SSH_PRIVATE_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the matching private key"
+        - name: HETZNER_SSH_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach SSH on TCP/22"
+        - name: HETZNER_HTTP_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach HTTP and HTTPS on TCP/80 and TCP/443"
+        - name: HETZNER_API_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach the Kubernetes API on TCP/6443"
+        - name: HETZNER_BASE_DOMAIN
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used to derive service hostnames when explicit hosts are not set"
+        - name: HETZNER_RANCHER_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for Rancher access"
+        - name: HETZNER_REGISTRY_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for the in-cluster registry"
+    tags:
+      - cloud
+      - opentofu
+      - profile
+  - id: oci-arm
+    name: oci-arm
+    kind: profile
+    visibility: public
+    category: cloud
+    description: "oci-arm profile packaged for Productive K3S (cloud, opentofu engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.1.tgz
+      sha256: 391aa1b435ff303673f55796dd46d5adc30b09217c5abd98a7b4cde3e8ce0cbb
+    bom:
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.1.bom.json
+      sha256: 03a4165a88c4833f9074177c33d8c333076053f52086b5c983f7891120f89a81
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: cloud-api
+      requiredCapabilities:
+      - cloud-api
+      requiredCommands:
+      - jq
+      - tofu
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: OCI_COMPARTMENT_OCID
+          required: true
+          sensitive: false
+          source: local-override
+          description: "OCI compartment OCID where the single ARM node is created"
+        - name: OCI_REGION
+          required: true
+          sensitive: false
+          source: package-default
+          description: "OCI region used for provisioning"
+        - name: OCI_AVAILABILITY_DOMAIN
+          required: false
+          sensitive: false
+          source: local-override
+          description: "Optional OCI availability domain; empty selects the first returned domain"
+        - name: OCI_CLUSTER_NAME
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Name used for generated resources and Productive K3S metadata"
+        - name: OCI_SHAPE
+          required: true
+          sensitive: false
+          source: package-default
+          description: "OCI compute shape for the ARM node"
+        - name: OCI_OCPUS
+          required: true
+          sensitive: false
+          source: package-default
+          description: "OCPU count for the flexible Ampere shape"
+        - name: OCI_MEMORY_IN_GBS
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Memory in GiB for the flexible Ampere shape"
+        - name: OCI_BOOT_VOLUME_SIZE_GB
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Boot volume size in GiB"
+        - name: OCI_IMAGE_OCID
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Ubuntu ARM64 image OCID compatible with the selected region"
+        - name: OCI_SSH_PUBLIC_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the SSH public key added to the VM"
+        - name: OCI_SSH_PRIVATE_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Absolute local path to the matching private key"
+        - name: OCI_SSH_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach SSH on TCP/22"
+        - name: OCI_HTTP_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach HTTP and HTTPS on TCP/80 and TCP/443"
+        - name: OCI_API_ALLOWED_CIDR
+          required: true
+          sensitive: false
+          source: package-default
+          description: "CIDR allowed to reach the Kubernetes API on TCP/6443"
+        - name: OCI_BASE_DOMAIN
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used to derive service hostnames when explicit hosts are not set"
+        - name: OCI_RANCHER_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for Rancher access"
+        - name: OCI_REGISTRY_HOST
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Hostname used for the in-cluster registry"
+    tags:
+      - cloud
+      - opentofu
+      - profile
+  - id: on-prem-arm
+    name: on-prem-arm
+    kind: profile
+    visibility: public
+    category: edge
+    description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.1.tgz
+      sha256: 80d592065dbba79a19f4f881c2c143e02ffe0a011ac04a3076c88e54223e777a
+    bom:
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.1.bom.json
+      sha256: 3527e4de1608d14b13ec4352b31c551cd7cf04ce377418249ab207bb92e7b541
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: remote-host
+      requiredCapabilities:
+      - remote-ssh
+      requiredCommands:
+      - ansible-playbook
+      - curl
+      - jq
+      - python3
+      - scp
+      - sha256sum
+      - ssh
+      - tar
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: ONPREM_SERVER_IP
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Server host or IP for the ARM on-prem cluster"
+        - name: ONPREM_SSH_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Local SSH private key path used to reach the ARM node"
+    tags:
+      - edge
+      - ansible
+      - profile
+  - id: on-prem-basic
+    name: on-prem-basic
+    kind: profile
+    visibility: public
+    category: edge
+    description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.1.tgz
+      sha256: f0a999fa194af2234e766f2715ecf7368744c94b2723a957651bf49ea223ec8b
+    bom:
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.1.bom.json
+      sha256: b1b96cbe87778f58191c73898f5b116dd469ca90a8b343bff031061f3a6c56b2
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: remote-host
+      requiredCapabilities:
+      - remote-ssh
+      requiredCommands:
+      - ansible-playbook
+      - curl
+      - jq
+      - python3
+      - scp
+      - sha256sum
+      - ssh
+      - tar
+    install:
+      requiresLocalOverrides: true
+      inputs:
+        - name: ONPREM_SERVER_IP
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Server host or IP for the on-prem cluster"
+        - name: ONPREM_AGENT_IPS
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Space-separated list of agent hosts or IPs"
+        - name: ONPREM_SSH_KEY_PATH
+          required: true
+          sensitive: false
+          source: local-override
+          description: "Local SSH private key path used to reach the nodes"
+    tags:
+      - edge
+      - ansible
+      - profile
+  - id: multipass-single-node
+    name: multipass-single-node
+    kind: profile
+    visibility: public
+    category: local
+    description: "multipass-single-node profile packaged for Productive K3S (local, opentofu engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.1.tgz
+      sha256: 0905e26b3538405ffd138a013006a8bb12e705e351bf5679fa271314d7e40df4
+    bom:
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.1.bom.json
+      sha256: 2b74e4763bf82f565b42e3e7b769a1a1c54c28cbcbda50cd22d9bd67f286b1b4
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: local-host
+      requiredCapabilities:
+      - local-virtualization
+      requiredCommands:
+      - curl
+      - jq
+      - multipass
+      - sha256sum
+      - ssh
+      - ssh-keygen
+      - tar
+      - timeout
+      - tofu
+    install:
+      requiresLocalOverrides: false
+      inputs:
+        - name: TF_VAR_cluster_name
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Multipass cluster name"
+        - name: TF_VAR_image
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Multipass image identifier"
+        - name: TF_VAR_base_domain
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used for generated hostnames"
+        - name: TF_VAR_agent_count
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Number of Multipass agent nodes; 0 for single-node validation"
+    tags:
+      - local
+      - opentofu
+      - profile
+  - id: multipass-1-server-2-agents
+    name: multipass-1-server-2-agents
+    kind: profile
+    visibility: public
+    category: local
+    description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
+    version: 0.1.1
+    sourceRepository: productive-k3s-profiles
+    artifact:
+      type: tgz
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.1.tgz
+      sha256: 4717fb48add6552b16373039590e7127b907ca74a63723214893728b6247695d
+    bom:
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.1.bom.json
+      sha256: 34b5f2ef1947ec98571997d0be4a9a4f028c73370cb5ce20372010f3b3360107
+      embeddedPath: bom.json
+    sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
+    compatibility:
+      requires:
+        infra:
+          contract: profile/v1
+          minEngineVersion: 0.9.65
+          maxEngineVersionExclusive: 0.10.0
+        core:
+          minVersion: 0.9.6
+          maxVersionExclusive: 0.10.0
+      testedWith:
+        infra:
+        - release: 0.9.65-0.9.6
+          core: 0.9.6
+    runtime:
+      executionScope: local-host
+      requiredCapabilities:
+      - local-virtualization
+      requiredCommands:
+      - curl
+      - jq
+      - multipass
+      - sha256sum
+      - ssh
+      - ssh-keygen
+      - tar
+      - timeout
+      - tofu
+    install:
+      requiresLocalOverrides: false
+      inputs:
+        - name: TF_VAR_cluster_name
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Multipass cluster name"
+        - name: TF_VAR_image
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Multipass image identifier"
+        - name: TF_VAR_base_domain
+          required: true
+          sensitive: false
+          source: package-default
+          description: "Base domain used for generated hostnames"
+    tags:
+      - local
+      - opentofu
+      - profile
