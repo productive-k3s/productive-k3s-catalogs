@@ -2,8 +2,8 @@ apiVersion: catalogs.productive-k3s.io/v1alpha1
 kind: ProductiveK3SCatalog
 metadata:
   name: productive-k3s-catalog
-  version: 0.9.67
-  generatedAt: "2026-10-20T01:03:29Z"
+  version: 0.9.68
+  generatedAt: "2026-11-10T13:03:48Z"
 entries:
   - id: argocd
     name: argocd
@@ -11,17 +11,17 @@ entries:
     visibility: public
     category: gitops
     description: "argocd addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.tgz
-      sha256: acd555c715b55ce3a0e8f034bfa32d8a01f4a61f026632d45eee6d6572a7e45f
+      url: https://downloads.productive-k3s.io/addons/argocd-0.1.1.tgz
+      sha256: c25bbaf79c2c6543632a9ed13f463eb80baced570edd2a212c9e19be2f0d2498
     bom:
-      url: https://downloads.productive-k3s.io/addons/argocd-0.1.0.bom.json
-      sha256: 924cb12420159f0bc2b2226cb5eed22afc267f976503a79b32791e17b4fa5ac2
+      url: https://downloads.productive-k3s.io/addons/argocd-0.1.1.bom.json
+      sha256: 67925a585b36300c25fd8b509a363366e6d155152a73b070e565ee093664753b
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -41,17 +41,17 @@ entries:
     visibility: public
     category: platform
     description: "cert-manager addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.tgz
-      sha256: 099af6c6d2de1c7206e3d7a50febf81855098b9922bb8234a47091db84e42a10
+      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.1.tgz
+      sha256: 4c7502bc8c411f02253b366d8bc9b0d421d63280900aa4d20b4cf437a538ca1b
     bom:
-      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.0.bom.json
-      sha256: 792079c4f83105930d1a26b02fce3b5df2636d60a05b5329973ca42b65128b45
+      url: https://downloads.productive-k3s.io/addons/cert-manager-0.1.1.bom.json
+      sha256: 40992c7351f70a796121bdf1b49ac26847b2adbe386cdbbbe473c6d30bc5fa24
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -71,17 +71,17 @@ entries:
     visibility: public
     category: database
     description: "cloudnative-pg addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.tgz
-      sha256: af874f14346fb2042a32e36cd05a2a3969a66a2b75e643707fcb8c068e74801e
+      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.1.tgz
+      sha256: ec2c20a5347a362d9d63c2b24525f1441688aa0db0d908994e6f1c53e2fa136b
     bom:
-      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.0.bom.json
-      sha256: dee57e6cf2795e349bf98214155ba8b97dc76e86537b9808212c74a74a6ca93c
+      url: https://downloads.productive-k3s.io/addons/cloudnative-pg-0.1.1.bom.json
+      sha256: 0cb9c2d5e1223782a083bbc33e1f64128fb9101b13fe49944fea4666c644647f
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -101,17 +101,17 @@ entries:
     visibility: public
     category: geospatial
     description: "geoserver-cloud addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.tgz
-      sha256: e94c387d71eac2f1ea519400f36c774796219d23e5336bd42fd93a113aac83e3
+      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.1.tgz
+      sha256: 8da339bf1869ba43898851a14245cc8980270b18c64d69060ae84891d00496ae
     bom:
-      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.0.bom.json
-      sha256: 8214a7d3c22a82c3972bd25239ec0be60cd1aebe3345eb530b745c6e49d9d0bf
+      url: https://downloads.productive-k3s.io/addons/geoserver-cloud-0.1.1.bom.json
+      sha256: c4d47f0e70ba059a88bbd1768b1f035e73e49025361fb4df62ccc3e7c04828a1
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -131,17 +131,17 @@ entries:
     visibility: public
     category: operations
     description: "kubent addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.tgz
-      sha256: dfbc0ecf54b5fcebffa10b841fda15763c85da31ae533d58e6e777d6e44b5646
+      url: https://downloads.productive-k3s.io/addons/kubent-0.1.1.tgz
+      sha256: 755e2b93a12c5e7f8c6502f8380b3a11954c88ab4460677654f9a252cc5e3dc1
     bom:
-      url: https://downloads.productive-k3s.io/addons/kubent-0.1.0.bom.json
-      sha256: 5da20a2d042c9cb7901ef3aae3fa03ea966231fa72b1f3bb545b7dde9c87f9a3
+      url: https://downloads.productive-k3s.io/addons/kubent-0.1.1.bom.json
+      sha256: 2d1cbf368d4165d083bf871a107523fd23356e9943cfbafe8b052ce650d8329f
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -161,17 +161,17 @@ entries:
     visibility: public
     category: security
     description: "kyverno addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.tgz
-      sha256: aa4689dd444c758e34751ceaf5b6cf7f9c22c05dc2bb753e43beda67e796628e
+      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.1.tgz
+      sha256: 321fb7e288fca4cd0fb0aa2690f4c1c5deb6002b52b4eb9ebdc89df37c421b9b
     bom:
-      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.0.bom.json
-      sha256: 3aaa2c6673fb74e895be7b0e1e8d2580028bd2ed4a0b3985a63e29853186e405
+      url: https://downloads.productive-k3s.io/addons/kyverno-0.1.1.bom.json
+      sha256: a30d685d1fbe8879a1a011f230c60f331c7cbe66b846f5c1bb7543ef46fd7596
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -191,17 +191,17 @@ entries:
     visibility: public
     category: platform
     description: "longhorn addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.tgz
-      sha256: c8a43b4da43786a50a7ddf39447bb0876aa9af541aff15e9e812b3edfaa0498b
+      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.1.tgz
+      sha256: b2eda5ae1baa15e57ab71cace518af967fd7d62f2c4e20cb91bb7cc8d77f4dee
     bom:
-      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.0.bom.json
-      sha256: 598d9550cd0573c6ba4419083a7df1401a935fee4e5bb69dfd68f2c18a99a0e0
+      url: https://downloads.productive-k3s.io/addons/longhorn-0.1.1.bom.json
+      sha256: 22224589a116e3b2606329fcd58735a71da017239db930dfdbae3e9887363977
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -221,17 +221,17 @@ entries:
     visibility: public
     category: example
     description: "nginx addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.tgz
-      sha256: ddbad16bee133f671d9e2932a1eee951f2378ea120fec3159de0eee5d3e619d8
+      url: https://downloads.productive-k3s.io/addons/nginx-0.1.1.tgz
+      sha256: c218754a834e2f811a7830c6be1c202ef897c7514e887e604a92fbaf11f2d21f
     bom:
-      url: https://downloads.productive-k3s.io/addons/nginx-0.1.0.bom.json
-      sha256: d040421fc35d3891d9dd09278936102e3aaae191c55bfbd3ec12aa3b7ffdbf56
+      url: https://downloads.productive-k3s.io/addons/nginx-0.1.1.bom.json
+      sha256: a890c7cfa2c158416f266cc3a76aba6233dfafca3ca8967f96c84aef3aeb4b3f
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -251,17 +251,17 @@ entries:
     visibility: public
     category: operations
     description: "popeye addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.tgz
-      sha256: b8d38a89f53965b118c05bf4827c5d2ad52e9c9ae8b10cb6672c3ed0cabf3ef0
+      url: https://downloads.productive-k3s.io/addons/popeye-0.1.1.tgz
+      sha256: 630a5e83186f7c6f12d25450611a7f20b506fba6a4da5be3e312403dc762500b
     bom:
-      url: https://downloads.productive-k3s.io/addons/popeye-0.1.0.bom.json
-      sha256: 1f0c3e54cb1b4e4d9f3bdce437941c71f70c11c998d6c3ad6776118c8ab5383b
+      url: https://downloads.productive-k3s.io/addons/popeye-0.1.1.bom.json
+      sha256: 0aab34c667394725c8c9c3e088d420931e9af10d0de6eeef0353617c06a9fe76
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -281,17 +281,17 @@ entries:
     visibility: public
     category: platform
     description: "rancher addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.tgz
-      sha256: 55e76468e8f17038b38b761d792b94f50e615515e21ee2292d2049b767f22dfa
+      url: https://downloads.productive-k3s.io/addons/rancher-0.1.1.tgz
+      sha256: c2674f054adfadf2e837233bc9fa619912f9ce2542a6bd5fd25e6b629de6e154
     bom:
-      url: https://downloads.productive-k3s.io/addons/rancher-0.1.0.bom.json
-      sha256: 1eaf09702e0ca901941ea8f7b37e539cbc6a5fc2735551f662abf861b66a276f
+      url: https://downloads.productive-k3s.io/addons/rancher-0.1.1.bom.json
+      sha256: 2081030a3791d23bb87aed9d8be24f8f616b853f885ba2b78bf19fd0c60dd8e5
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -311,17 +311,17 @@ entries:
     visibility: public
     category: platform
     description: "registry addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/registry-0.1.0.tgz
-      sha256: e1b2a5d5e4ca7db4c50d18ba708b568d57cff23d8a392af6f877b7937760d0a1
+      url: https://downloads.productive-k3s.io/addons/registry-0.1.1.tgz
+      sha256: 9db250dacded04bfdf4b7450081e716d40ab0b4a1c96d15188aa93efb3cf2563
     bom:
-      url: https://downloads.productive-k3s.io/addons/registry-0.1.0.bom.json
-      sha256: eea648c74759c7ed513116e7c87f31e06e856a0668db7159f7b299bc71b188d8
+      url: https://downloads.productive-k3s.io/addons/registry-0.1.1.bom.json
+      sha256: 457f92ac27a3acbb652097234f6b2e08c829ba661511bed845e6c89a32878daf
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -341,17 +341,17 @@ entries:
     visibility: public
     category: security
     description: "trivy-operator addon packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.tgz
-      sha256: 1568a0f7cba84b4a5f2b3a96efae78b5687f448a20f74027ef71911882ef9e84
+      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.1.tgz
+      sha256: 6007533d8b881c82426b66b3dc21c1f1eb422eb83e33fb1edb3275249ca48bea
     bom:
-      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.0.bom.json
-      sha256: 9fa80e3730315ccb7e4348b50956771d2a0f08b4f44387b1d88ce4a78d7c3302
+      url: https://downloads.productive-k3s.io/addons/trivy-operator-0.1.1.bom.json
+      sha256: 57924bc6274edef397c64e7df127d0ec4b588be2070af151cfc0046fc61f287a
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -371,17 +371,17 @@ entries:
     visibility: public
     category: platform
     description: "base stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/base-0.1.0.tgz
-      sha256: f4618ac222ce47c4daaf599b5a48744973e0348fad56507259cd6625594f6c8c
+      url: https://downloads.productive-k3s.io/addons/base-0.1.1.tgz
+      sha256: 43541d8abbe6a3ca491249fb4d6e8bce9490ff364615d8c911a5fce680526987
     bom:
-      url: https://downloads.productive-k3s.io/addons/base-0.1.0.bom.json
-      sha256: fffdfd89d8c8b2cd2745c905e1ab7ca2b975ba5d6d2817ef2669cb905412115f
+      url: https://downloads.productive-k3s.io/addons/base-0.1.1.bom.json
+      sha256: cec2ea0e39ee4e1dc4ccbda4daabb3b077ff2a4e7512a4b5eee86e58900cd63f
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -401,17 +401,17 @@ entries:
     visibility: public
     category: operations
     description: "cluster-health stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.tgz
-      sha256: fe4bb36a0d003b5f222e9e36c1af52bc7b14148fab78311e751e054844c6fcf1
+      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.1.tgz
+      sha256: e1494429e3a1f3ceb1a716e1fdaec1624c7d529b9f7c29d75d7ab8b593e57af4
     bom:
-      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.0.bom.json
-      sha256: 32b1a846c1e2a7832d1b2cb9e19b26365f994683f6573d10bdec681befe9b895
+      url: https://downloads.productive-k3s.io/addons/cluster-health-0.1.1.bom.json
+      sha256: 32ebfb69105e7e4333e68d78bc9732c50f774edce87fe35ff3a00215ecb49479
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -431,17 +431,17 @@ entries:
     visibility: public
     category: security
     description: "cluster-security stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.tgz
-      sha256: 771b66313c4e12455d1cb379f2aa70613f197be8a4bd382bf3fb1006c477bb92
+      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.1.tgz
+      sha256: 95c9403adb95fabc45cb6e94cbca371f063adb3340f5eb4f3cd1e29cc1f6561f
     bom:
-      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.0.bom.json
-      sha256: 8e37b2bbc488290fab5a4f998dfdc29bdf2df9be7f2bba5a79418fc4e5c898dd
+      url: https://downloads.productive-k3s.io/addons/cluster-security-0.1.1.bom.json
+      sha256: 5f1581e6cd15917711d07e3f0b9286659a65a0af4d3519273829de5a9b8ab7eb
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -461,17 +461,17 @@ entries:
     visibility: public
     category: database
     description: "database stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/database-0.1.0.tgz
-      sha256: a3bb3e98adfcb0ee3df30dd624d9c2c77f0927cb999fadfcd4c5e2006d550eee
+      url: https://downloads.productive-k3s.io/addons/database-0.1.1.tgz
+      sha256: e9f919d67591a289ffed5329707d47f89d248e56e68f169e2eddecfa246c93c7
     bom:
-      url: https://downloads.productive-k3s.io/addons/database-0.1.0.bom.json
-      sha256: fdd759f394bbc06f3cea0c26be429e3079f4c410163f616d1eb6c6346629fd1e
+      url: https://downloads.productive-k3s.io/addons/database-0.1.1.bom.json
+      sha256: a42a36335fa71287512f6d7e0fd406b627383d13e51c2acf343424000881e0fb
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -491,17 +491,17 @@ entries:
     visibility: public
     category: geospatial
     description: "geospatial stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.tgz
-      sha256: 05327b880eaa42ea9ef4cf2ead73443e0e4cdf9110d3a8a8e0dd11d2fcf35333
+      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.1.tgz
+      sha256: b4d4a5a34e48e2f76f0aaace402f91f3faa75073cdd979e886ee35beaa0375f7
     bom:
-      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.0.bom.json
-      sha256: fa3f68925069335ec2ba9d9a97f0102b94b4a10b6449737b60ea64aac814b838
+      url: https://downloads.productive-k3s.io/addons/geospatial-0.1.1.bom.json
+      sha256: 247ca88c34aa5199469ca563e05aa4cb1327578b1ed53566b21e10cee9b84b51
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -521,17 +521,17 @@ entries:
     visibility: public
     category: gitops
     description: "gitops stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.tgz
-      sha256: 7a7b8dc861fcd3d996089cf4528a222fc9d0e9c8c0943f0004bdfa6a74b08aca
+      url: https://downloads.productive-k3s.io/addons/gitops-0.1.1.tgz
+      sha256: 8e31e3bb86343f1fe15ca1650450f857476b66dd21ad64c5f965d90e017245d9
     bom:
-      url: https://downloads.productive-k3s.io/addons/gitops-0.1.0.bom.json
-      sha256: 18c4979e6d1d0b0ab380219ae66fee9716466ca03abe6fc35f56825e3ba78ccf
+      url: https://downloads.productive-k3s.io/addons/gitops-0.1.1.bom.json
+      sha256: 1a63735aab605134f7e2137f20addddc025a8b2c49258a42f992e00e796d06c7
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -551,17 +551,17 @@ entries:
     visibility: public
     category: operations
     description: "production-readiness stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.tgz
-      sha256: 5f78a346c2e7b01bf439017943d76cd577c00e24d085f3e74f6d11c07e6a811e
+      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.1.tgz
+      sha256: 9894a6a114749f13094733fa8339da486f92991335cb784afe606a2bb6f52848
     bom:
-      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.0.bom.json
-      sha256: 969f65950ba74be1a3457dcce2acd75be8049b5c7ed5a486a6728723da0426fd
+      url: https://downloads.productive-k3s.io/addons/production-readiness-0.1.1.bom.json
+      sha256: a420356ef3eb1516c17f817252b98db568fbe3262439ef8d3e2ee970e9270a3e
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -581,17 +581,17 @@ entries:
     visibility: public
     category: adaptation
     description: "docker-compose-uptime-kuma stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.tgz
-      sha256: ddf2dccb7f9889052daa84e17e892377cca615c7d8781bd47e43c8fecaeedf74
+      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.1.tgz
+      sha256: c213590dd8dc2d38099fc6f79b2b7a75ba1d8cc39e408876d548c7ac3ccff0b1
     bom:
-      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.0.bom.json
-      sha256: 5b05e45b95622619ee830c6a4b34492b304fd2abbc0a54b8dee0a3a505dab452
+      url: https://downloads.productive-k3s.io/addons/docker-compose-uptime-kuma-0.1.1.bom.json
+      sha256: 9e7887d273ab510417e53c13661ccf82ca92e9cd1cf5c3fe273803eaffd2efa9
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -611,17 +611,17 @@ entries:
     visibility: public
     category: adaptation
     description: "openship-control-plane stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.tgz
-      sha256: 8e6c0c0491e589f35f9c494dc464f410a7ec1088ed5a7522fc5e934f8656f21d
+      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.1.tgz
+      sha256: c00d4930312e01752ea61173d45d9ce14cb982443a7682e798615995bf6a4b18
     bom:
-      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.0.bom.json
-      sha256: 6d15b4417885b6afa33569152b5cd01855df8f87977671a503f40c46a7ad5416
+      url: https://downloads.productive-k3s.io/addons/openship-control-plane-0.1.1.bom.json
+      sha256: 3f24cc167623a775d70fb566a9b7133acdcd6d7d3d3e49ecb98796c8197e2f3a
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -641,17 +641,17 @@ entries:
     visibility: public
     category: adaptation
     description: "openship-whoami-redis stack packaged for Productive K3S."
-    version: 0.1.0
+    version: 0.1.1
     sourceRepository: productive-k3s-addons
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.tgz
-      sha256: 21290280ca68ff36fffcbb0b1a51f223ddecfa886f9570d5da9831921d3f300e
+      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.1.tgz
+      sha256: 1811fc5130703650e59144913416f48d94daa8e826b959da6b184f6d77029763
     bom:
-      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.0.bom.json
-      sha256: 92e5c675b4b7fc6d00d427a1800b98f0e0b48bda8e39c3120072580a7b5ecd50
+      url: https://downloads.productive-k3s.io/addons/openship-whoami-redis-0.1.1.bom.json
+      sha256: d0601e4d02b944fe9a3b529fbd94b52d3c324d30583211aeb416aa6f28e581b8
       embeddedPath: bom.json
-    sourceRevision: 732411cece63cd3bff95f769cbdca0fd32b2c95b
+    sourceRevision: 2450913498b8b5fed6b07b6f688b55776e5fe1de
     compatibility:
       requires:
         core:
@@ -671,15 +671,15 @@ entries:
     visibility: public
     category: cloud
     description: "aws-single-node-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.1.tgz
-      sha256: 321eee205c5c103aa019e41b0ab69de54ebd0fff7dd28652c1eb26a8b45b86bc
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.tgz
+      sha256: 5185d3798cf53e9ed560164845e6773932894e4ab1d28bc1c08ff9ca6a606f3b
     bom:
-      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.1.bom.json
-      sha256: 470278cc18c5c809fdb6de4e29a19aeee7eff669ef5f07bcbaa526e4b45b6edf
+      url: https://downloads.productive-k3s.io/infra/aws-single-node-basic-0.1.0.bom.json
+      sha256: e39331bb456c85fb7384ebc691c9c31a8f902406cc3b764ea109b3d771f45e52
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
@@ -730,15 +730,15 @@ entries:
     visibility: public
     category: cloud
     description: "gcp-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.1.tgz
-      sha256: e568224dd29cee0162fee679de4dba73281a48c90f39f49d4f6c04803c954401
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.tgz
+      sha256: 23e06cb943765c50e95d3be58c4289eec51484964a31ec006be7bc933ce07aed
     bom:
-      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.1.bom.json
-      sha256: 1f61cf5ec7362b973e47abafab9328c60b976226540129333280461a01bfe69c
+      url: https://downloads.productive-k3s.io/infra/gcp-basic-0.1.0.bom.json
+      sha256: bdc5f0e143a1595702aa23a2ba230c9ed921d003bb18ba8e36765fc5cca216d5
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
@@ -844,15 +844,15 @@ entries:
     visibility: public
     category: cloud
     description: "hetzner-basic profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.1.tgz
-      sha256: e7d47e55ddefe5f81c53ddc83db81e5e6a17c629df7a8eaa20df909524724dc5
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.tgz
+      sha256: 931acafeaccfc3ab7695a6879949060e69cb52782241185d05cec85b34c45924
     bom:
-      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.1.bom.json
-      sha256: 9f990a1e5fc70f2c108c83f39af7b28b02453cae93549a29de9c6c9585d98206
+      url: https://downloads.productive-k3s.io/infra/hetzner-basic-0.1.0.bom.json
+      sha256: ec148c9c7d9b89364defa730eb6ba3412533af5d8cdfeb77f90d98b18b779671
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
@@ -953,15 +953,15 @@ entries:
     visibility: public
     category: cloud
     description: "oci-arm profile packaged for Productive K3S (cloud, opentofu engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.1.tgz
-      sha256: 391aa1b435ff303673f55796dd46d5adc30b09217c5abd98a7b4cde3e8ce0cbb
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.tgz
+      sha256: fbece514f825dbdd418654c6c8a6a77a4f46f398c342967e69ed648cfd8cb3bf
     bom:
-      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.1.bom.json
-      sha256: 03a4165a88c4833f9074177c33d8c333076053f52086b5c983f7891120f89a81
+      url: https://downloads.productive-k3s.io/infra/oci-arm-0.1.0.bom.json
+      sha256: d5ce3dbcb7b545182dcf3389588440c8cc888f76de5b69301b3f8b6cab1cca63
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
@@ -1082,15 +1082,15 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-arm profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.1.tgz
-      sha256: 80d592065dbba79a19f4f881c2c143e02ffe0a011ac04a3076c88e54223e777a
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.tgz
+      sha256: 2e03821676fc27a890773d8b0c5069f25fd8164186480b2c6d8f50daab832ca6
     bom:
-      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.1.bom.json
-      sha256: 3527e4de1608d14b13ec4352b31c551cd7cf04ce377418249ab207bb92e7b541
+      url: https://downloads.productive-k3s.io/infra/on-prem-arm-0.1.0.bom.json
+      sha256: a4c6b08d047d3c07791c236fc583a5cce481956c2a49fa1d8d303b1d6de53429
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
@@ -1142,15 +1142,15 @@ entries:
     visibility: public
     category: edge
     description: "on-prem-basic profile packaged for Productive K3S (edge, ansible engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.1.tgz
-      sha256: f0a999fa194af2234e766f2715ecf7368744c94b2723a957651bf49ea223ec8b
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.tgz
+      sha256: e60725c4a46c8c8e3a95ceacd989c496b23229e454116cfbf635b5a36c20e999
     bom:
-      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.1.bom.json
-      sha256: b1b96cbe87778f58191c73898f5b116dd469ca90a8b343bff031061f3a6c56b2
+      url: https://downloads.productive-k3s.io/infra/on-prem-basic-0.1.0.bom.json
+      sha256: 33f3c1c96010e92233d4ec84aedd6a0977623caa10414d01e2cd11021be273a5
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
@@ -1207,15 +1207,15 @@ entries:
     visibility: public
     category: local
     description: "multipass-single-node profile packaged for Productive K3S (local, opentofu engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.1.tgz
-      sha256: 0905e26b3538405ffd138a013006a8bb12e705e351bf5679fa271314d7e40df4
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.tgz
+      sha256: 2b48c62b2d86787ed44ce0469464e63ebc6fcdba1fbc295a805090c1c9ce308a
     bom:
-      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.1.bom.json
-      sha256: 2b74e4763bf82f565b42e3e7b769a1a1c54c28cbcbda50cd22d9bd67f286b1b4
+      url: https://downloads.productive-k3s.io/infra/multipass-single-node-0.1.0.bom.json
+      sha256: 487e7d4df5b27196853bda0459a9214e2926e38f1314e2a7d5170836a2f41a21
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
@@ -1278,15 +1278,15 @@ entries:
     visibility: public
     category: local
     description: "multipass-1-server-2-agents profile packaged for Productive K3S (local, opentofu engine)."
-    version: 0.1.1
+    version: 0.1.0
     sourceRepository: productive-k3s-profiles
     artifact:
       type: tgz
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.1.tgz
-      sha256: 4717fb48add6552b16373039590e7127b907ca74a63723214893728b6247695d
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.tgz
+      sha256: 2259cee38e04d3b95724a5b47d09aa4d3c83da2b217b1f450ba0139dfb051dd5
     bom:
-      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.1.bom.json
-      sha256: 34b5f2ef1947ec98571997d0be4a9a4f028c73370cb5ce20372010f3b3360107
+      url: https://downloads.productive-k3s.io/infra/multipass-1-server-2-agents-0.1.0.bom.json
+      sha256: c41440fc8fbdee8b0c1b6c59e6eff471de5fa935b617f1e249af45111bf5fe75
       embeddedPath: bom.json
     sourceRevision: b8ca8490925692d9f381cd804d8d4d64ac24e6b5
     compatibility:
